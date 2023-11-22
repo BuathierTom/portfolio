@@ -1,0 +1,19 @@
+header {
+    background-color: $background-color;
+    padding: 1.2rem; // 20px
+    opacity: 0.9;
+}
+
+.header__space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: $tertiary-white;
+}
+
+p {
+    color: $tertiary-white;
+}
