@@ -1,0 +1,24 @@
+// On met la nav bar sur le coter droit
+.button__nav-icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    color: $white;
+    background-color: $background-color;
+
+    border: 0.2rem solid $primary;
+    border-radius: 50%;
+
+}
+
+.button__nav {
+    display: flex;
+    position: fixed;
+    top: 55%;
+    right: 3%;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-50%);
+}
