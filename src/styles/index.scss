@@ -1,10 +1,18 @@
-@import "./themes/_colors";
+// Themes
+@import "./themes/colors";
 @import "./themes/fonts";
 @import "./themes/typos";
 
+// Settings
+@import "settings";
+
+// Components
 @import "./components/clock";
+@import "./components/navbar";
 
-@import "_settings";
+// Pages
+@import "./pages/home";
 
-@import "./layouts/_header";
+// Layouts
+@import "./layouts/header";
 

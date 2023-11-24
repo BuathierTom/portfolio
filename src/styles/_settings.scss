@@ -1,10 +1,43 @@
 * {
-    font-family: $primary-font;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
     background-color: $background-color;
     background-image: url('../../public/background.svg');
+    overflow-x: hidden;
+}
+
+
+h1, h2, h3, h4, p, li, a, input, button {
+  color: $white;
+  font-family: $primary-font;
+}
+
+p{
+  font-size: $font-size-sm;
+}
+
+header {
+  background-color: $background-color;
+  padding: 1.2rem; // 20px
+  opacity: 0.9;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden;
 }
