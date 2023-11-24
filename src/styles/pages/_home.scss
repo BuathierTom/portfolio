@@ -1,3 +1,9 @@
+body {
+    overflow: hidden;
+}
+
+
+
 .container__page{
     width: 100vw;
     
@@ -24,11 +30,12 @@
                 .container__left-part {
                     display: flex;
                     justify-content: center;
+                    padding-left: 50px;
 
                     div {
                         background-color: $white;
-                        width: 300px;
-                        height: 300px;
+                        width: 250px;
+                        height: 250px;
                         border-radius: 50%;
                         overflow: hidden;
                         border: 3px solid $secondary;
@@ -50,6 +57,42 @@
                     h2 {
                         color: $white;
                     }
+
+                    .span__title {
+                        color: $secondary;
+                    }
+
+                    .button__downloadCV{
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+
+                        margin-top: 20px;
+                        width: 170px;
+                        height: 50px;
+                        background-color: $secondary;
+                        border: none;
+                        border-radius: 10px;
+                        color: $white;
+                        font-size: $font-size-sm;
+                        font-weight: bold;
+                        cursor: pointer;
+                        // Neon effect
+                        filter: 
+                        drop-shadow(0 0 20px $secondary) contrast(1) brightness(0.9);
+                        transition: .5s;
+
+                        &:hover {
+                            // Neon effect
+                            background-color: $white;
+                            color: $secondary;
+                            filter: 
+                            drop-shadow(0 0 20px $white) contrast(1) brightness(0.9);
+                        }
+                    }
+
                 }
             }
         }
