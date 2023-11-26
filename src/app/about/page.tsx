@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '@/layouts/Header';
 import { NavBar } from '@/components';
 
-function aboutPage() {
+function About() {
     return (
         <main>
             <Header />
@@ -12,4 +12,4 @@ function aboutPage() {
 }   
 
 
-export default aboutPage
+export default About
