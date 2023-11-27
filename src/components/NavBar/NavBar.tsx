@@ -11,9 +11,10 @@ import Link from "next/link";
 
 const navElements = new Map<string, FunctionComponent>(
     [
-        ['about', PersonIcon],
-        ['projects', BusinessCenterIcon],
-        ['contact', MailIcon]
+        [`/`, HomeIcon],
+        [`/about`, PersonIcon],
+        [`/projects`, BusinessCenterIcon],
+        [`/contact`, MailIcon]
     ]
 )
 
@@ -24,7 +25,7 @@ const NavBar = () => {
             return (
                 <div className={`button_control-${key}`}>
 
-                    <Link href={`/${key}`}>
+                    <Link href={`${key}`}>
                         <Icon key={index} className="button__nav-icon"/>
                     </Link>
                 </div>
@@ -34,11 +35,6 @@ const NavBar = () => {
 
   return (
     <div className="button__nav">
-        <div className={`button_control-home`}>
-            <Link href={`/`}>
-                <HomeIcon className="button__nav-icon"/>
-            </Link>
-        </div>
         { renderChilds() }
     </div>
   );
