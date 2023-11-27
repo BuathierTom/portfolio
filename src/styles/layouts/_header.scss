@@ -2,12 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.container__name {
-    &:hover {
-        // Neon effect
-        filter: 
-        drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
+    .container__name {
+        &:hover {
+            // Neon effect
+            filter: 
+            drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
+        }
     }
 }
+
