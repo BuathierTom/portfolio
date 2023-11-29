@@ -5,8 +5,7 @@ import { NavBar } from '@/components';
 function Projects() {
     return (
         <main>
-            <Header />
-            <NavBar />
+
         </main>
     )
 }   

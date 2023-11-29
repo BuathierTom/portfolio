@@ -5,8 +5,7 @@ import { NavBar } from '@/components';
 function Contact() {
     return (
         <main>
-            <Header />
-            <NavBar />
+            
         </main>
     )
 }   
