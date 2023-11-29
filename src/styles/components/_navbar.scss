@@ -22,7 +22,13 @@
         &:hover {
             filter: drop-shadow(0 0 10px $primary) contrast(1) brightness(0.9);
         }
+
+        .button__nav-icon--active {
+            background-color: $primary;
+        }
     
     }
+
+
 }
 

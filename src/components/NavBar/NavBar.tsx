@@ -11,10 +11,10 @@ import Link from "next/link";
 
 const navElements = new Map<string, FunctionComponent>(
     [
-        [`/`, HomeIcon],
-        [`/about`, PersonIcon],
-        [`/projects`, BusinessCenterIcon],
-        [`/contact`, MailIcon]
+        [``, HomeIcon],
+        [`about`, PersonIcon],
+        [`projects`, BusinessCenterIcon],
+        [`contact`, MailIcon]
     ]
 )
 
@@ -23,9 +23,9 @@ const NavBar = () => {
     const renderChilds = () => {
         return Array.from(navElements).map(([key, Icon],index : number) => {
             return (
-                <div className={`button_control-${key}`}>
+                <div className={`button_control-${key}`} key={index}>                    
 
-                    <Link href={`${key}`}>
+                    <Link href={`/${key}`}>
                         <Icon key={index} className="button__nav-icon"/>
                     </Link>
                 </div>
