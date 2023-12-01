@@ -1,0 +1,30 @@
+.container__button {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;  
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+
+    .button__skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    
+        margin-top: 20px;
+        width: 200px;
+        height: 70px;
+        background-color: $white;
+        border: 1px solid $primary;
+        border-radius: 10px;
+        color: $primary;
+        font-size: $font-size-sm;
+        font-weight: bold;
+    
+        transition: all 0.3s ease-in-out;
+        
+    }
+}
+
