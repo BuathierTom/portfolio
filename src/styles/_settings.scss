@@ -11,7 +11,7 @@ html {
 body {
     background-color: $background-color;
     background-image: url('../../public/background.svg');
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -38,6 +38,10 @@ a{
   text-decoration: none;
 }
 
-main {
-  overflow: hidden;
+::-webkit-scrollbar {
+    width: 6px;
+    background: $background-color;
+}
+::-webkit-scrollbar-thumb {
+    background: $primary;
 }
