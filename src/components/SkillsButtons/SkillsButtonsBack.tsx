@@ -22,8 +22,10 @@ const SkillsButtonsBack = () => {
     const renderChilds = () => {
         return Array.from(SkillsElements).map(([key, Icon],index : number) => {
             return (
-                <button className='button__skills' key={index}>                    
-                        <Icon key={index} size={40} /> {key} 
+                <button className='button__skills' key={index}>       
+                    <div className="daron">          
+                        <Icon key={index} /> {key} 
+                    </div>
                 </button>
             );
         });
