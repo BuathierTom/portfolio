@@ -29,7 +29,7 @@
                     flex-direction: column;
 
                     .container__page--top-content {
-                        padding: 3rem;
+                        padding: 1.5rem;
                         display: flex;
                         justify-content: center;
 
@@ -94,4 +94,35 @@
         }
 
     }
+
+
+    @media (max-width: $breakpoints-768) {
+        .container__page{
+            .container__page--top {
+                .container__page--top-first {
+                    .container__page--top-about {
+                        .container__page--top-content {
+                            font-size: $font-size-xs;
+                        }
+                    }
+                }
+
+                .container__page--top-second {
+                        .container__page--top-frontend {
+                            padding: 1rem;
+                        }
+
+                        .container__page--top-backend {
+                            padding: 1rem;
+                        }
+
+                        .container__page--top-other {
+                            padding: 1rem;
+                            margin-bottom: 75px;
+                        }
+                }
+            }
+        }
+    }
+
 }
