@@ -72,6 +72,7 @@
                             font-size: $font-size-sm;
                             font-weight: bold;
                             cursor: pointer;
+
                             // Neon effect
                             filter: 
                             drop-shadow(0 0 20px $secondary) contrast(1) brightness(0.9);
@@ -91,4 +92,70 @@
             }
         }
     }
+
+    @media (max-width: $breakpoints-1024) {
+        .container__page {
+            .container__page-top {
+                .container__page-top--left {
+                    .container__page-top--container {
+                        width: 100%;
+                        flex-direction: column;
+                        gap: 20px;
+    
+                        .container__left-part {
+                            padding-left: 0;
+
+    
+                            div {
+                                width: 170px;
+                                height: 170px;
+                            }
+                        }
+    
+                        .container__right-part {
+                            align-items: center;
+                            text-align: center;
+    
+                            .button__downloadCV {
+                                width: 150px;
+                                height: 40px;
+                                font-size: $font-size-xs;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoints-480) {
+        .container__page {
+            .container__page-top {
+                .container__page-top--left {
+                    .container__page-top--container {
+
+                        .container__left-part {
+                            div {
+                                width: 130px;
+                                height: 130px;
+                            }
+                        }
+
+                        .container__right-part {
+                            font-size: $font-size-xs;
+
+                            .button__downloadCV {
+                                width: 130px;
+                                height: 40px;
+                                font-size: $font-size-xxs;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
 }
