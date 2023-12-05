@@ -32,3 +32,12 @@
 
 }
 
+@media (max-width: $breakpoints-768) {
+
+    .button__nav{
+        display: none;
+    }
+}
+
+
+
