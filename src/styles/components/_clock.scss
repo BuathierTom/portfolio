@@ -1,3 +1,11 @@
 .container__clock {
     color: $white;
 }
+
+@media (max-width: $breakpoints-768) {
+
+    .container__clock {
+        display: none;
+    }
+
+}
