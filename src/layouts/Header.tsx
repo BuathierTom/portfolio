@@ -19,14 +19,6 @@ function Header() {
             <div className={`header__space${isMenuOpen ? "--active" : ""}`}>
                 <h1 className="container__name"> <Link href="/">{Name}</Link> </h1>
                 <Clock />
-                <div className="container__burger" onClick={toggleMenu}>
-                    <div className={`menu${isMenuOpen ? "--active" : ""}`}>
-                        <Link href="/">Home</Link>
-                        <Link href="/about">About</Link>
-                        <Link href="/projects">Project</Link>
-                        <Link href="/contact">Contact</Link>
-                    </div>
-                </div>
             </div>
         </header>
     );
