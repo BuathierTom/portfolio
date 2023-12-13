@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     transform: translateY(-50%);
-
+    
     .button__nav-icon {
         width: 4rem;
         height: 4rem;
@@ -15,28 +15,104 @@
         margin-bottom: 1rem;
         color: $white;
         background-color: $background-color;
-    
+        
         border: 0.2rem solid $primary;
         border-radius: 50%;
-    
+        
         &:hover {
             filter: drop-shadow(0 0 10px $primary) contrast(1) brightness(0.9);
         }
-
+    
         .button__nav-icon--active {
             background-color: $primary;
         }
+        
+    }    
     
-    }
-
-
 }
 
-@media (max-width: $breakpoints-768) {
+.container__burger {
+    display: none;
+}
 
-    .button__nav{
+
+@media (max-width: $breakpoints-768) {
+    .button__nav {
         display: none;
+
+        .button_control {
+            display: none;
+        }
     }
+
+    .container__burger {
+        display: flex;
+        position: absolute;
+        top: 1.2rem;
+        right: 3%;
+
+        .menu {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background-image: url('../../../public/menu_icon.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            a {
+                display: none;
+            }
+
+        }
+
+        .menu--active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            z-index: 10;
+            padding: 1rem;
+            overflow-y: hidden;
+            background-color: rgba(7, 8, 15, 0.8);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+
+            .menu__close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                background-image: url('../../../public/close_icon.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .nav-bar__ul{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                gap: 2rem;
+
+                .menu__link {
+                    color: $white;
+                    font-weight: bold;
+                    font-size: $font-size-xl;
+                }
+
+            }
+
+        }
+    }
+
 }
 
 
