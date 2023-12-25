@@ -1,0 +1,40 @@
+#projects {
+
+    .span__title {
+        color: $secondary;
+    }
+
+    .container__page{
+        width: 100vw;
+
+        padding-bottom: 3rem;
+
+        .container__page--top {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+            flex-direction: column;
+
+            .container__page--top-first {
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                .container__page--top-projects {
+                    display: flex;
+                    height: max-content;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .container__page--top-projects-title {
+                        padding: 3rem 0 ;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
