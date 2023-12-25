@@ -12,6 +12,8 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.18",
+    "@mui/material-next": "^6.0.0-alpha.114",
+    "@nextui-org/react": "^2.2.9",
     "devicons-react": "^1.2.6",
     "next": "14.0.3",
     "react": "^18",
