@@ -2,7 +2,7 @@
 
 import React, { FunctionComponent } from "react";
 
-import { Html5Original, Css3Original, PhpOriginal, JavascriptOriginal, ReactOriginal, SassOriginal } from 'devicons-react';
+import { Html5Original, Css3Original, PhpOriginal, JavascriptOriginal, NextjsOriginal, SassOriginal } from 'devicons-react';
 
 const SkillsElements = new Map<string, FunctionComponent>(
     [
@@ -10,7 +10,7 @@ const SkillsElements = new Map<string, FunctionComponent>(
         [`CSS`, Css3Original],
         [`PHP`, PhpOriginal],
         [`JavaScript`, JavascriptOriginal],
-        [`React`, ReactOriginal],
+        [`Next.JS`, NextjsOriginal],
         [`SASS`, SassOriginal],
     ]
 )
