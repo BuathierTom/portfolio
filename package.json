@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@formspree/react": "^2.5.1",
     "@mui/icons-material": "^5.14.18",
     "@mui/material-next": "^6.0.0-alpha.114",
     "@nextui-org/react": "^2.2.9",
@@ -20,7 +21,8 @@
     "react-clock": "^4.5.1",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "sweetalert2": "^11.10.4"
   },
   "devDependencies": {
     "@types/node": "^20",
