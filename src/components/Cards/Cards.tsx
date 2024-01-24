@@ -78,10 +78,7 @@ const CardsComponent = () => {
           {cardData.link ? (
             <a href={cardData.link} target="_blank" className="container__card-footer-link">
               <LaunchIcon />
-            </a>
-          ) : (
-            null
-          )}
+            </a> ) : ( null )}
         </div>
       </div>
     ));
