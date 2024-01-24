@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
 import Image from 'next/image';
 import { ReactOriginal, NodejsOriginal, MongodbOriginal, SassOriginal, NextjsOriginal, JavaOriginal, CsharpOriginal, BlenderOriginal, UnityOriginal  } from 'devicons-react';
 
@@ -11,7 +11,7 @@ const CardsComponent = () => {
     {
       img: "/reserve.png",
       title: "ReserveTonLogis",
-      description: "C'est un site de gestions de réservations de 3 chambres d’hôtes chez un particulier. Il est dynamique et permet de réserver une chambre avec des prix différents en fonction des saisons. Je me suis occupé de la partie back-end du site. ",
+      description: "Website for managing bookings for 3 guest rooms in a private home. The site is dynamic and allows you to book a room at different prices depending on the season.",
       icons: [ReactOriginal, SassOriginal, NodejsOriginal, MongodbOriginal],
       date: "Sept 2023 - Nov 2023",
       link: "https://github.com/BuathierTom/ReserveTonLogis/",
@@ -19,7 +19,7 @@ const CardsComponent = () => {
     {
       img: "/portfolio.png",
       title: "Portfolio", 
-      description: "Portfolio réalisé en Next.JS. Une vitrine en ligne mettant en valeur mes compétences, réalisations et projets, résumant mon parcours professionnel.",
+      description: "Portfolio created in Next.JS. An online resume highlighting my skills, achievements and projects, summarising my career path.",
       icons: [NextjsOriginal, SassOriginal],
       date: "Nov 2023 - Jan 2024",
       link: "https://github.com/BuathierTom/portfolio/",
@@ -27,7 +27,7 @@ const CardsComponent = () => {
     {
       img: "/unity.png",
       title: "BioKid", 
-      description: "Jeu développé sur Unity en C# pour les enfants de 5 à 14 ans. Il permet de découvrir le cycle de la pollution sur différents écosystèmes.",
+      description: "Game developed on Unity in C# for children aged 5 to 14. It shows the pollution cycle in different ecosystems.",
       icons: [UnityOriginal, BlenderOriginal, CsharpOriginal, ],
       date: "Nov 2023 - Jan 2024",
       link: "https://github.com/anthony-eluecque/reseARch-educative-app",
@@ -35,7 +35,7 @@ const CardsComponent = () => {
     {
       img: "/quarto.png",
       title: "Quarto Game", 
-      description: "Jeu de société Quarto en Java, qui se joue à 2. Le joueur qui aligne 4 pièces ayant au moins un point commun entre elles gagne la partie.",
+      description: "Quarto board game in Java, played by 2 players. The player who lines up 4 pieces with at least one in common wins the game.",
       icons: [JavaOriginal],
       date: "Sept 2022 - Avril 2023",
       link: "https://github.com/BuathierTom/quarto-game-project/",
