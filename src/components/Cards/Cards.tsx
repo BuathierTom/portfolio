@@ -22,7 +22,6 @@ const CardsComponent = () => {
       description: "Portfolio created in Next.JS. An online resume highlighting my skills, achievements and projects, summarising my career path.",
       icons: [NextjsOriginal, SassOriginal],
       date: "Nov 2023 - Jan 2024",
-      link: "https://github.com/BuathierTom/portfolio/",
     },
     {
       img: "/unity.png",
@@ -30,7 +29,7 @@ const CardsComponent = () => {
       description: "Game developed on Unity in C# for children aged 5 to 14. It shows the pollution cycle in different ecosystems.",
       icons: [UnityOriginal, BlenderOriginal, CsharpOriginal, ],
       date: "Nov 2023 - Jan 2024",
-      link: "https://github.com/anthony-eluecque/reseARch-educative-app",
+      // link: "https://github.com/anthony-eluecque/reseARch-educative-app",
     },
     {
       img: "/quarto.png",
@@ -76,9 +75,13 @@ const CardsComponent = () => {
               {cardData.date}
             </button>
 
+          {cardData.link ? (
             <a href={cardData.link} target="_blank" className="container__card-footer-link">
-             <LaunchIcon />
+              <LaunchIcon />
             </a>
+          ) : (
+            null
+          )}
         </div>
       </div>
     ));
