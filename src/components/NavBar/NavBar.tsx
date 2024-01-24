@@ -27,16 +27,32 @@ const NavBar = () => {
     };
 
     const renderChilds = () => {
-        return Array.from(navElements).map(([key, Icon],index : number) => {
+        // return Array.from(navElements).map(([key, Icon],index : number) => {
             return (
-                <div className={`button_control`} key={index}>                    
-
-                    <Link href={`/${key}`}>
-                        <Icon key={index} className="button__nav-icon"/>
-                    </Link>
+                <div>
+                    <div className='button_control'>                    
+                        <Link href='/'>
+                            <HomeIcon className="button__nav-icon"/>
+                        </Link>
+                    </div>
+                    <div className='button_control'>
+                        <Link href='/about'>
+                            <PersonIcon className="button__nav-icon"/>
+                        </Link>
+                    </div>
+                    <div className='button_control'>
+                        <Link href='/projects'>
+                            <BusinessCenterIcon className="button__nav-icon"/>
+                        </Link>
+                    </div>
+                    <div className='button_control'>
+                        <Link href='/contact'>
+                            <MailIcon className="button__nav-icon"/>
+                        </Link>
+                    </div>
                 </div>
             );
-        });
+        // });
     }
 
   return (

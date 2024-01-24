@@ -46,7 +46,7 @@ const CardsComponent = () => {
     return jsonData.map((cardData, index) => (
       <div className="container__card-single" key={index}>
         <span className="container__card-img">
-          <Image src={cardData.img} alt={`Card Image ${index + 1}`} />
+          <Image src={cardData.img} alt={`Card Image ${index + 1}`} width={300} height={200} />
         </span>
 
         <div className="container__card-title">
