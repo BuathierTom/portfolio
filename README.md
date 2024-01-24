@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+Portfolio réalisé en Next.JS. Un CV en ligne mettant en valeur mes compétences, réalisations et projets.
 
-First, run the development server:
+
+## Installation
+
+Installer mon projet en téléchargeant le code à partir de github et en installant les dépendances.
+
+```bash
+  cd my-project
+  npm install
+```
+
+Et pour le lancer en local :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Rendez-vous ensuite sur ce lien : http://localhost:5000/ 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Déploiement
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Le déploiement à été effectuer sur vercel. J'ai utilisé le framework next.js ce qui m'a permis de le déployer plus rapidement sur vercel.
 
-## Learn More
+**Lien vers le portfolio :**
 
-To learn more about Next.js, take a look at the following resources:
+> https://buathier-portfolio.vercel.app/ 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Variables d'environnement
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`cv_link` : lien vers le CV
 
-## Deploy on Vercel
+## Palette de couleurs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Black - Little of blue | ![#07080F](https://via.placeholder.com/10/07080F?text=+) #07080F |
+| Blue | ![#1DA0FF](https://via.placeholder.com/10/1DA0FF?text=+) #1DA0FF |
+| Green | ![#22B460](https://via.placeholder.com/10/22B460?text=+) #22B460 |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+License MIT.
+
+## Auteurs
+
+[BuathierTom](https://github.com/BuathierTom)
