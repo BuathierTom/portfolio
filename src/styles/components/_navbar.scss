@@ -18,6 +18,10 @@
         
         border: 0.2rem solid $primary;
         border-radius: 50%;
+
+        &--current {
+            background-color: $primary;
+        }
         
         &:hover {
             filter: drop-shadow(0 0 10px $primary) contrast(1) brightness(0.9);
@@ -106,6 +110,12 @@
                     color: $white;
                     font-weight: bold;
                     font-size: $font-size-xl;
+
+                    &--current {
+                        color: $primary;
+                        filter: drop-shadow(0 0 10px $primary) contrast(1) brightness(0.7);
+                        
+                    }
                 }
 
             }
