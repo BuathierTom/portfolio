@@ -1,7 +1,41 @@
+"use client";
+
 import React from 'react';
 import SendIcon from '@mui/icons-material/Send';
+import { useForm, ValidationError } from '@formspree/react';
+import Swal from 'sweetalert2';
+
+const MySwal = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },  
+    
+
+})
 
 function Contact() {
+
+    const [state, handleSubmit] = useForm("xayrwkrn");
+    const [popupShown, setPopupShown] = React.useState(false);
+
+    if (state.succeeded && !popupShown) {
+        MySwal.fire({
+            icon: 'success',
+            title: 'Message sent successfully',
+            showConfirmButton: false,
+        });
+        setPopupShown(true);
+
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
     return (
         <main id="contact">
             <div className='container__page'>
@@ -12,7 +46,7 @@ function Contact() {
                 </div>
 
                 <div className='container__page-form'>
-                    <form action="https://formspree.io/f/xayrwkrn" method="POST">
+                    <form onSubmit={handleSubmit}>
                         <div className='container__content'>
                             <div className='container__name'>
                                 <div className='label_name'>
