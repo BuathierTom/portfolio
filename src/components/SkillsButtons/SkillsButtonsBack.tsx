@@ -1,6 +1,7 @@
 "use client";
 
 import React, { FunctionComponent } from "react";
+import Image from 'next/image';
 
 import { NodejsOriginal, SymfonyOriginal, TypescriptOriginal, MongodbOriginal, PostgresqlOriginal } from 'devicons-react';
 
@@ -35,7 +36,7 @@ const SkillsButtonsBack = () => {
     <div className="container__button">
         { renderChilds() }
         <button className='button__skills'>
-            <img src={SwaggerLogo} width={40} height={40} /> Swagger
+            <Image src={SwaggerLogo} alt="" width={40} height={40} /> Swagger
         </button>
     </div>
   );
