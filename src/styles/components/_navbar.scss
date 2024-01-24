@@ -21,6 +21,7 @@
 
         &--current {
             background-color: $primary;
+            filter: drop-shadow(0 0 7px $primary) contrast(1) brightness(0.8);
         }
         
         &:hover {
@@ -113,7 +114,7 @@
 
                     &--current {
                         color: $primary;
-                        filter: drop-shadow(0 0 10px $primary) contrast(1) brightness(0.7);
+                        filter: drop-shadow(0 0 7px $primary) contrast(1) brightness(0.7);
                         
                     }
                 }
