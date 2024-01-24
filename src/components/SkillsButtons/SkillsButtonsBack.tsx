@@ -5,7 +5,7 @@ import React, { FunctionComponent } from "react";
 import { NodejsOriginal, SymfonyOriginal, TypescriptOriginal, MongodbOriginal, PostgresqlOriginal } from 'devicons-react';
 
 // Tema pas AntoCrack
-const SwaggerLogo = "https://camo.githubusercontent.com/96e43701d83561899724a89d71187445b7b8f4fe84518a3ea5bec8f85bd207bf/68747470733a2f2f63646e2e737667706f726e2e636f6d2f6c6f676f732f737761676765722e737667"
+const SwaggerLogo = "https://raw.githubusercontent.com/caputomarcos/node-red-contrib-swagger-js/master/icons/swagger.svg"
 
 const SkillsElements = new Map<string, FunctionComponent>(
     [
