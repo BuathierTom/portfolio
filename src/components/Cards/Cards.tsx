@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import Image from 'next/image';
 import { ReactOriginal, NodejsOriginal, MongodbOriginal, SassOriginal, NextjsOriginal, JavaOriginal, CsharpOriginal, BlenderOriginal, UnityOriginal  } from 'devicons-react';
 
 import LaunchIcon from '@mui/icons-material/Launch';
@@ -46,7 +46,7 @@ const CardsComponent = () => {
     return jsonData.map((cardData, index) => (
       <div className="container__card-single" key={index}>
         <span className="container__card-img">
-          <img src={cardData.img} alt={`Card Image ${index + 1}`} />
+          <Image src={cardData.img} alt={`Card Image ${index + 1}`} />
         </span>
 
         <div className="container__card-title">

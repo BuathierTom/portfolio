@@ -12,7 +12,7 @@ function Home() {
             <div className='container__page-top--container'>
               <aside className='container__left-part'>
                 <div>
-                  <Image src="/profil.jpg" alt='profil' width="250" height="250"/>
+                  <Image src='/profil.jpg' alt='profil' width='250' height='250'/>
                 </div>
               </aside>
               <div className='container__right-part'>
