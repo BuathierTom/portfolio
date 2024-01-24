@@ -19,7 +19,7 @@ function Home() {
               <div className='container__right-part'>
                 <h1>Hello,</h1>
                 <h2>My name is <span className='span__title'>BUATHIER Tom</span></h2>
-                <h2>I'm an IT student, <span className='span__title'>a back-end developer</span></h2>
+                <h2>I'm an IT student, <span className='span__title'>a fullstack developer</span></h2>
 
                 <a href={"https://drive.google.com/file/d/1qeIApRfaFcICu7WuQk527zqhf7Ngyhfj/view?usp=sharing"} target='_blank'>
                   <button className='button__downloadCV'><DownloadIcon className='dwl__icon'/> MY RESUME </button>
