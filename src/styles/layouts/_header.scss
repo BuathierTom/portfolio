@@ -14,12 +14,31 @@
             drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
         }
     }
+
+    .container_img {
+        display: none;
+    }
 }
 
 @media (max-width: $breakpoints-480) {
     .header__space {
         .container__name {
-            font-size: $font-size-xl;
+            display: none;
+        }
+
+        .container_img {
+            display: flex;
+            
+            .container_img-img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            &:hover {
+                // Neon effect
+                filter: 
+                drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
+            }
         }
     }
 }
