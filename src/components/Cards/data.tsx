@@ -19,7 +19,7 @@ const jsonData = [
     {
       img: "/img/projects/unity.png",
       title: "BioKid", 
-      description: "Game developed on Unity in C# for children aged 5 to 14. It shows the pollution cycle in different ecosystems.",
+      description: "Game developed on Unity in C# for children aged 5 to 14. It shows the pollution cycle in different ecosystems. It's a little AR game to help children better understand this cycle.",
       icons: [UnityOriginal, BlenderOriginal, CsharpOriginal, ],
       date: "Nov 2023 - Jan 2024",
       // link: "https://github.com/anthony-eluecque/reseARch-educative-app",

@@ -16,11 +16,23 @@ function About() {
                             </h1>
 
                             <div className='container__page--top-content'>
+                            <p>
                                 <p>
-                                    Etiam lobortis augue vitae risus aliquet porta. Vestibulum gravida augue ut purus laoreet dignissim. Proin pulvinar diam justo, in tempus enim egestas quis. 
-                                    Nam in nulla tellus. Maecenas ullamcorper semper sem pharetra consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-                                    Fusce at auctor massa, ac tempor eros.
+                                    Hello ! 👋
                                 </p>
+                            <br />
+                                <p>
+                                    I'm a 3rd year computer science student at the University Institute of Technology of Calais. I'm a fullstack developer and it's through this portfolio that I'm showing you my front-end development skills. 
+                                </p>
+                            <br />
+                                <p>
+                                    As for my other projects, you can visit the associated part of my portfolio, which gathers all the biggest projects I've done during my 3 years of study.
+                                </p>
+                            <br />
+                                <p>
+                                    My goal after my Technological Bachelor, I'd like to go for a master's degree in computer science. My goal after my studies is to work as a fullstack web developer.
+                                </p>
+                            </p>
                             </div>
                         </div>
                     </div>
