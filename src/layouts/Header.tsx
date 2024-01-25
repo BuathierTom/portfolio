@@ -19,7 +19,7 @@ function Header() {
         <header>
             <div className={`header__space${isMenuOpen ? "--active" : ""}`}>
                 <h1 className="container__name"> <Link href="/">{ Name }</Link> </h1>
-                <div className="container_img">
+                <div className="container__img">
                 <a href="/">
                     <Image src='/img/layout/t_logo.png' alt="Tom Buathier" width={50} height={50} className="container__img-img"/>
                 </a>
