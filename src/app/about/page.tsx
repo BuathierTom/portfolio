@@ -22,15 +22,15 @@ function About() {
                                 </p>
                             <br />
                                 <p>
-                                    I'm a 3rd year computer science student at the University Institute of Technology of Calais. I'm a fullstack developer and it's through this portfolio that I'm showing you my front-end development skills. 
+                                    I&prime;m a 3rd year computer science student at the University Institute of Technology of Calais. I&prime;m a fullstack developer and it&prime;s through this portfolio that I&prime;m showing you my front-end development skills. 
                                 </p>
                             <br />
                                 <p>
-                                    As for my other projects, you can visit the associated part of my portfolio, which gathers all the biggest projects I've done during my 3 years of study.
+                                    As for my other projects, you can visit the associated part of my portfolio, which gathers all the biggest projects I&prime;ve done during my 3 years of study.
                                 </p>
                             <br />
                                 <p>
-                                    My goal after my Technological Bachelor, I'd like to go for a master's degree in computer science. My goal after my studies is to work as a fullstack web developer.
+                                    My goal after my Technological Bachelor, I&prime;d like to go for a master&prime;s degree in computer science. My goal after my studies is to work as a fullstack web developer.
                                 </p>
                             </p>
                             </div>
