@@ -23,13 +23,30 @@
                 justify-content: center;
 
                 .container__page--top-projects {
+                    width: 100vmin;
                     display: flex;
                     height: max-content;
                     align-items: center;
                     flex-direction: column;
 
                     .container__page--top-projects-title {
-                        padding: 3rem 0 ;
+                        padding: 3rem 0 0 0;
+                    }
+
+                    .container__page--top-content {
+                        padding: 3rem 2rem;
+                        display: flex;
+                        justify-content: center;
+
+                        p {
+                            text-align: justify;
+                            max-height: max-content;
+
+                            a {
+                                color: $secondary;
+                                font-weight: bold;
+                            }
+                        }
                     }
 
                 }
