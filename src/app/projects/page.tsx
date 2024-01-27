@@ -14,7 +14,7 @@ function Projects() {
 
                             <div className='container__page--top-content'>
                                 <p>
-                                    Here's my projects section, where you can see my biggest projects from my student years. If you'd like to see more projects, please visit my <a href='https://github.com/BuathierTom' target='_blank'>Github</a>.
+                                    Here&prime;s my projects section, where you can see my biggest projects from my student years. If you&prime;d like to see more projects, please visit my <a href='https://github.com/BuathierTom' target='_blank'>Github</a>.
                                 </p>
                             </div>
 
