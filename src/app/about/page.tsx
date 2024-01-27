@@ -18,10 +18,6 @@ function About() {
                             <div className='container__page--top-content'>
                             <p>
                                 <p>
-                                    Hello ! 👋
-                                </p>
-                            <br />
-                                <p>
                                     I&prime;m a 3rd year computer science student at the University Institute of Technology of Calais. I&prime;m a fullstack developer and it&prime;s through this portfolio that I&prime;m showing you my front-end development skills. 
                                 </p>
                             <br />

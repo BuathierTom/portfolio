@@ -16,7 +16,7 @@ function Home() {
                 </div>
               </aside>
               <div className='container__right-part'>
-                <h1>Hello,</h1>
+                <h1>Hello 👋,</h1>
                 <h2>My name is <span className='span__title'>BUATHIER Tom</span></h2>
                 <h2>I&prime;m an IT student, <span className='span__title'>a fullstack developer</span></h2>
 
