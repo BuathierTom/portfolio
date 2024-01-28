@@ -34,10 +34,31 @@
     }
 }
 
+@media (max-width: $breakpoints-768) {
+    
+    .header__space{
+        .container__socials {
+            display: none;
+
+            .container__socials-icons {
+                display: none;
+            }
+        }
+    }
+}
+
 @media (max-width: $breakpoints-480) {
     .header__space {
         .container__name {
             display: none;
+        }
+
+        .container__socials {
+            display: none;
+
+            .container__socials-icons {
+                display: none;
+            }
         }
 
         .container__img {
