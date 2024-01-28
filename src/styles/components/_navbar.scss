@@ -146,6 +146,20 @@
 
             }
 
+            .container__socials {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                .container__socials-icons {
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+
+                }
+            }
+
         }
     }
 

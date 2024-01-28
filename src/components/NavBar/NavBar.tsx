@@ -9,6 +9,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import MailIcon from '@mui/icons-material/Mail';
 
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 
 const NavBar = () => {
 
@@ -94,7 +97,19 @@ const NavBar = () => {
                     <li className="nav-bar__li">
                         <Link href="/contact" className={getIconClassResponsive("/contact")}>Contact</Link>
                     </li>
+
+                    <div className="container__socials">
+                        <Link href={'https://github.com/BuathierTom'} target="_blank">
+                            <GitHubIcon className="container__socials-icons"/>
+                        </Link>
+                        
+                        <Link href={'https://www.linkedin.com/in/tom-buathier/'} target="_blank">
+                            <LinkedInIcon className="container__socials-icons"/>
+                        </Link>
+                    </div>
                 </ul>
+
+
             </div>
         </div>
         <div className="button__nav">
