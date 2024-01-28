@@ -43,21 +43,33 @@ const NavBar = () => {
                     <Link href='/'>
                         <HomeIcon className={getIconClass("/")}/>
                     </Link>
+                    <div className="button_control-hoverit">
+                        <p>Home</p>
+                    </div>
                 </div>
                 <div className='button_control'>
                     <Link href='/about'>
                         <PersonIcon className={getIconClass("/about")}/>
                     </Link>
+                    <div className="button_control-hoverit">
+                        <p>About</p>
+                    </div>
                 </div>
                 <div className='button_control'>
                     <Link href='/projects'>
                         <BusinessCenterIcon className={getIconClass("/projects")}/>
                     </Link>
+                    <div className="button_control-hoverit">
+                        <p>Projects</p>
+                    </div>
                 </div>
                 <div className='button_control'>
                     <Link href='/contact'>
                         <MailIcon className={getIconClass("/contact")}/>
                     </Link>
+                    <div className="button_control-hoverit">
+                        <p>Contact</p>
+                    </div>
                 </div>
             </span>
         );
