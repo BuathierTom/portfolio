@@ -18,7 +18,7 @@ function About() {
                             <div className='container__page--top-content'>
                             <p>
                                 <p>
-                                    I&prime;m a 3rd year computer science student at the University Institute of Technology of Calais. I&prime;m a fullstack developer and it&prime;s through this portfolio that I&prime;m showing you my front-end development skills. 
+                                    I&prime;m a 3rd year computer science student at the University of Calais. I&prime;m a fullstack developer and it&prime;s through this portfolio that I&prime;m showing you my front-end development skills. 
                                 </p>
                             <br />
                                 <p>
@@ -26,7 +26,7 @@ function About() {
                                 </p>
                             <br />
                                 <p>
-                                    My goal after my Technological Bachelor, I&prime;d like to go for a master&prime;s degree in computer science. My goal after my studies is to work as a fullstack web developer.
+                                    My goal after my license, I&prime;d like to go for a master&prime;s degree in computer science. My goal after my studies is to work as a fullstack web developer.
                                 </p>
                             </p>
                             </div>
