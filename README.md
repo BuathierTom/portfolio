@@ -1,49 +1,59 @@
-# Portfolio
+# 🌟 Portfolio
 
-Portfolio réalisé en Next.JS. Un CV en ligne mettant en valeur mes compétences, réalisations et projets.
+Bienvenue sur mon **Portfolio**, une vitrine interactive réalisée avec **Next.js** pour présenter mes compétences, réalisations et projets de manière moderne et élégante.  
 
 
-## Installation
+## ⚙️ Installation
 
-Installer mon projet en téléchargeant le code à partir de github et en installant les dépendances.
+### 🚀 Installer le projet  
+
+1. Clonez ce dépôt ou téléchargez-le depuis GitHub.  
+2. Installez les dépendances avec la commande suivante :  
 
 ```bash
-  cd my-project
-  npm install
+cd my-project
+npm install
 ```
 
-Et pour le lancer en local :
+### ▶️ Lancer le projet en local  
+
+Pour démarrer le serveur local :  
 
 ```bash
 npm run dev
 ```
 
-Rendez-vous ensuite sur ce lien : http://localhost:5000/ 
+Ensuite, rendez-vous sur ce lien : [http://localhost:5000/](http://localhost:5000/) 🌐  
 
-## Déploiement
+## 🌍 Déploiement  
 
-Le déploiement à été effectuer sur vercel. J'ai utilisé le framework next.js ce qui m'a permis de le déployer plus rapidement sur vercel.
+Le portfolio est déployé sur **Vercel**, grâce à la compatibilité et à la simplicité du framework **Next.js**.  
 
-**Lien vers le portfolio :**
+### 🔗 **Lien vers le portfolio**  
 
-> https://buathier-portfolio.vercel.app/ 
+👉 [https://buathier-portfolio.vercel.app/](https://buathier-portfolio.vercel.app/)  
 
-## Variables d'environnement
+## 🔑 Variables d'environnement  
 
-`cv_link` : lien vers le CV
+Ajoutez cette variable d'environnement pour permettre l'accès au lien du CV :  
 
-## Palette de couleurs
+- `cv_link` : Lien vers votre CV hébergé.  
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Black - Little of blue | ![#07080F](https://via.placeholder.com/10/07080F?text=+) #07080F |
-| Blue | ![#1DA0FF](https://via.placeholder.com/10/1DA0FF?text=+) #1DA0FF |
-| Green | ![#22B460](https://via.placeholder.com/10/22B460?text=+) #22B460 |
+## 🎨 Palette de couleurs  
 
-## License
+Voici les couleurs principales utilisées pour le design du portfolio :  
 
-License MIT.
+| Couleur            | Code Hexadecimal                                              |
+| ------------------- | ------------------------------------------------------------ |
+| 🖤 Noir (avec une pointe de bleu) | ![#07080F](https://via.placeholder.com/10/07080F?text=+) `#07080F` |
+| 🔵 Bleu             | ![#1DA0FF](https://via.placeholder.com/10/1DA0FF?text=+) `#1DA0FF` |
+| 💚 Vert             | ![#22B460](https://via.placeholder.com/10/22B460?text=+) `#22B460` |
 
-## Auteurs
 
-[BuathierTom](https://github.com/BuathierTom)
+## 📝 Licence  
+
+Ce projet est sous licence **MIT**, vous pouvez l'utiliser librement tout en respectant ses conditions.  
+
+## ✨ Auteur  
+
+Réalisé avec ❤️ par [BuathierTom](https://github.com/BuathierTom).  
