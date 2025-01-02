@@ -16,7 +16,7 @@
     "@mui/material-next": "^6.0.0-alpha.114",
     "@nextui-org/react": "^2.2.9",
     "devicons-react": "^1.2.6",
-    "next": "14.2.10",
+    "next": "14.2.15",
     "react": "^18",
     "react-clock": "^4.5.1",
     "react-dom": "^18",
