@@ -4,6 +4,7 @@ import Image from 'next/image';
 import jsonData from './data';
 
 import LaunchIcon from '@mui/icons-material/Launch';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const CardsComponent = () => {
 
@@ -40,11 +41,21 @@ const CardsComponent = () => {
             <button className="container__card-footer-date">
               {cardData.date}
             </button>
+          {(cardData.link_site || cardData.link_github) ? (
+            <span className="container__card-footer-links">
+              {cardData.link_github && (
+                <a href={cardData.link_github} target="_blank" className="container__card-footer-link">
+                  <GitHubIcon />
+                </a>
+              )}
+              {cardData.link_site && (
+                <a href={cardData.link_site} target="_blank" className="container__card-footer-link">
+                  <LaunchIcon />
+                </a>
+              )}
 
-          {cardData.link ? (
-            <a href={cardData.link} target="_blank" className="container__card-footer-link">
-              <LaunchIcon />
-            </a> ) : ( null )}
+            </span>
+          ) : null}
         </div>
       </div>
     ));

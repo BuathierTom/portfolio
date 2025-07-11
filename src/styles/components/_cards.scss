@@ -85,18 +85,20 @@
             color: $white;
         }
 
+        .container__card-footer-links {
+            display: flex;
+            gap: 8px;
+        }
         .container__card-footer-link {
-
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            margin-left: 0;
             svg{
                 width: 30px !important;
                 height: 30px !important;
                 fill: $white;
             }
-        
         }
     }
 }
