@@ -18,15 +18,17 @@ function About() {
                             <div className='container__page--top-content'>
                             <p>
                                 <p>
-                                    I&prime;m a 3rd year computer science student at the University of Calais. I&prime;m a fullstack developer and it&prime;s through this portfolio that I&prime;m showing you my front-end development skills. 
+                                    I&prime;m a computer science student at the University of Calais, and I&prime;m about to start my master&prime;s degree in Free Software Engineering (I2L). I&prime;m passionate about web development, and I&prime;ve built many personal projects outside of my coursework, alongside my academic projects.
                                 </p>
                             <br />
                                 <p>
-                                    As for my other projects, you can visit the associated part of my portfolio, which gathers all the biggest projects I&prime;ve done during my 3 years of study.
+                                    In the Projects section of my portfolio, you&prime;ll find a selection of my most important and interesting work. This includes major projects I&prime;ve completed during my three years of study at the University of Calais, as well as several personal projects I&prime;ve developed on my own initiative.
+                                    These projects cover a wide range of topics, from fullstack web applications and API development to more experimental or passion-driven ideas. Each project reflects both my technical skills and my curiosity to explore new technologies outside the classroom.
+                                    Feel free to explore this section to get a better idea of my experience and my approach to problem-solving.
                                 </p>
                             <br />
                                 <p>
-                                    My goal after my license, I&prime;d like to go for a master&prime;s degree in computer science. My goal after my studies is to work as a fullstack web developer.
+                                    After completing my master&prime;s degree, my goal is to work as a fullstack web developer.
                                 </p>
                             </p>
                             </div>
