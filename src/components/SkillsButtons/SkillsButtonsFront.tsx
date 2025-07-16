@@ -2,16 +2,19 @@
 
 import React, { FunctionComponent } from "react";
 
-import { Html5Original, Css3Original, PhpOriginal, JavascriptOriginal, NextjsOriginal, SassOriginal } from 'devicons-react';
+import { Html5Original, Css3Original, JavascriptOriginal, NextjsOriginal, SassOriginal, VitejsOriginal, BootstrapPlain, TailwindcssOriginal, ReactOriginal} from 'devicons-react';
 
 const SkillsElements = new Map<string, FunctionComponent>(
     [
         [`HTML`, Html5Original],
         [`CSS`, Css3Original],
-        [`PHP`, PhpOriginal],
         [`JavaScript`, JavascriptOriginal],
+        [`React`, ReactOriginal],
         [`Next.JS`, NextjsOriginal],
+        [`Vite.JS`, VitejsOriginal],
         [`SASS`, SassOriginal],
+        [`Bootstrap`, BootstrapPlain],
+        [`Tailwind`, TailwindcssOriginal],
     ]
 )
 

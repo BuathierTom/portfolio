@@ -1,20 +1,20 @@
 "use client";
 
 import React, { FunctionComponent } from "react";
-import Image from 'next/image';
 
-import { NodejsOriginal, SymfonyOriginal, TypescriptOriginal, MongodbOriginal, PostgresqlOriginal } from 'devicons-react';
-
-// Tema pas AntoCrack
-const SwaggerLogo = "https://raw.githubusercontent.com/caputomarcos/node-red-contrib-swagger-js/master/icons/swagger.svg"
+import { NodejsOriginal, SymfonyOriginal, TypescriptOriginal, MongodbOriginal, PostgresqlOriginal, PhpOriginal, DotnetcoreOriginal, JavaOriginal, KubernetesOriginal } from 'devicons-react';
 
 const SkillsElements = new Map<string, FunctionComponent>(
     [
         [`Node.JS`, NodejsOriginal ],
+        [`.NET`, DotnetcoreOriginal ],
+        [`PHP`, PhpOriginal],
+        [`Java`, JavaOriginal],
         [`Symfony`, SymfonyOriginal ],
         [`TypeScript`, TypescriptOriginal ],
         [`MongoDB`, MongodbOriginal ],
         [`Postgres`, PostgresqlOriginal],
+        [`Kubernetes`, KubernetesOriginal],
     ]
 )
 
@@ -35,9 +35,6 @@ const SkillsButtonsBack = () => {
   return (
     <div className="container__button">
         { renderChilds() }
-        <button className='button__skills'>
-            <Image src={SwaggerLogo} alt="" width={40} height={40} /> Swagger
-        </button>
     </div>
   );
 };

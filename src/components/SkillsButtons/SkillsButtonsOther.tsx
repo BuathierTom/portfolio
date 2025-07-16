@@ -2,16 +2,19 @@
 
 import React, { FunctionComponent } from "react";
 
-import { JavaOriginal, GithubOriginal, DockerPlain, VscodeOriginal, FigmaOriginal, BootstrapPlain } from 'devicons-react';
+import { GithubOriginal, DockerPlain, VscodeOriginal, FigmaOriginal, InsomniaOriginal, AzureOriginal, NotionOriginal, SwaggerOriginal, VercelOriginal } from 'devicons-react';
 
 const SkillsElements = new Map<string, FunctionComponent>(
-    [
-        [`Java`, JavaOriginal],
-        [`GitHub`, GithubOriginal],
-        [`Docker`, DockerPlain],
+    [ 
         [`VS Code`, VscodeOriginal],
+        [`GitHub`, GithubOriginal],
+        [`Notion`, NotionOriginal],
+        [`Docker`, DockerPlain],
+        [`Azure`, AzureOriginal],
+        [`Vercel`, VercelOriginal],
         [`Figma`, FigmaOriginal],
-        [`Bootstrap`, BootstrapPlain],
+        [`Insomnia`, InsomniaOriginal],
+        [`Swagger`, SwaggerOriginal],
     ]
 )
 
