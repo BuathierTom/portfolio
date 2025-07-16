@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 5000",
+    "dev": "next dev -p 5435",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -16,13 +16,13 @@
     "@mui/material-next": "^6.0.0-alpha.114",
     "@nextui-org/react": "^2.2.9",
     "devicons-react": "^1.2.6",
-    "next": "14.2.15",
+    "next": "^14.2.30",
     "react": "^18",
     "react-clock": "^4.5.1",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
     "sass": "^1.69.5",
-    "sweetalert2": "^11.10.4"
+    "sweetalert2": "^11.6.13"
   },
   "devDependencies": {
     "@types/node": "^20",
