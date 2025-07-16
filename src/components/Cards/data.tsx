@@ -7,7 +7,7 @@ const jsonData = [
       description: "ApiShop is a full-featured e-commerce REST API built with ASP.NET Core, providing user authentication, product and category management, shopping cart functionality, and order processing.",
       icons: [VitejsOriginal, TypescriptOriginal, DotnetcoreOriginal, ],
       date: "Juil 2025",
-      link_site: "https://buathier-apishop.vercel.app/",
+      link_site: "https://apishop.buathier-tom.fr/",
       link_github: "https://github.com/BuathierTom/ApiShop"
     },
     {
@@ -16,7 +16,7 @@ const jsonData = [
       description: "TaskFlow is a dynamic and responsive to-do list application to manage daily tasks with deadlines and status tracking.",
       icons: [VitejsOriginal, TypescriptOriginal],
       date: "Juil 2025",
-      link_site: "https://buathier-taskflow.vercel.app/",
+      link_site: "https://taskflow.buathier-tom.fr/",
       link_github: "https://github.com/BuathierTom/TaskFlow"
     },
     {
@@ -34,7 +34,7 @@ const jsonData = [
       description: "Portfolio created in Next.JS. An online resume highlighting my skills, achievements and projects, summarising my career path.",
       icons: [NextjsOriginal, SassOriginal],
       date: "Nov 2023 - Jan 2024",
-      link_site: "https://buathier-portfolio.vercel.app/"
+      link_site: "https://buathier-tom.fr/"
     },
   ];
 
