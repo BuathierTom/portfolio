@@ -1,127 +1,85 @@
 #about {
+  .highlight {
+    color: $secondary;
+  }
 
-    .span__title {
-        color: $secondary;
-    }
+  .about__wrapper {
+    width: 100vw;
 
-    .container__page{
+    .about__section {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+
+      .about__intro {
         width: 100vw;
-        
-        .container__page--top {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .about__intro-text {
+          width: 100vmin;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .about__description {
+            padding: 1.6rem;
             display: flex;
-            flex-wrap: wrap;
-            width: 100vw;
-            flex-direction: column;
+            justify-content: center;
 
-            .container__page--top-first {
-                width: 100vw;
-                padding: 1rem;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-
-                .container__page--top-about {
-                    width: 100vmin;
-                    display: flex;
-                    height: max-content;
-                    align-items: center;
-                    flex-direction: column;
-
-                    .container__page--top-content {
-                        padding: 1.6rem;
-                        display: flex;
-                        justify-content: center;
-
-                        p {
-                            text-align: justify;
-                            max-height: max-content;
-                        }
-        
-                    }
-
-                }
-
+            p {
+              text-align: justify;
             }
+          }
+        }
+      }
 
-            .container__page--top-second {
-                width: 100vw;
-                padding: 1rem;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
+      .about__skills {
+        width: 100vw;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-                .container__page--top-skills {
-                    width: 100vmin;
-                    display: flex;
-                    height: 100%; 
-                    align-items: center;
-                    flex-direction: column;
-                }
-                
-                .container__page--top-frontend {
-                    width: 100vmin;
-                    padding: 2.5rem;
-                    display: flex;
-                    height: max-content;
-                    align-items: center;
-                    flex-direction: column;
-                }
-
-                .container__page--top-backend {
-                    width: 100vmin;
-                    padding: 2.5rem;
-                    display: flex;
-                    height: max-content;
-                    align-items: center;
-                    flex-direction: column;
-                }
-
-                .container__page--top-other {
-                    width: 100vmin;
-                    padding: 2.5rem;
-                    display: flex;
-                    height: max-content;
-                    align-items: center;
-                    flex-direction: column;
-                }
-
-
-            }
-
-
+        .about__skills-title {
+          width: 100vmin;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
-    }
-
-
-    @media (max-width: $breakpoints-768) {
-        .container__page{
-            .container__page--top {
-                .container__page--top-first {
-                    .container__page--top-about {
-                        .container__page--top-content {
-                            font-size: $font-size-xs;
-                        }
-                    }
-                }
-                
-                .container__page--top-second {
-                        .container__page--top-frontend {
-                            padding: 1rem;
-                        }
-
-                        .container__page--top-backend {
-                            padding: 1rem;
-                        }
-
-                        .container__page--top-other {
-                            padding: 1rem;
-                        }
-                }
-            }
+        .about__skills-group {
+          width: 100vmin;
+          padding: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
+      }
     }
+  }
 
+  @media (max-width: $breakpoints-768) {
+    .about__wrapper {
+      .about__section {
+        .about__intro {
+          .about__intro-text {
+            .about__description {
+              font-size: $font-size-xs;
+            }
+          }
+        }
+
+        .about__skills {
+          .about__skills-group {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
 }
