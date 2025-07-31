@@ -1,121 +1,81 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import MailIcon from '@mui/icons-material/Mail';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-
 const NavBar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-    const [isMenuOpen, setMenuOpen] = useState(false);
-    
-    const pathname = usePathname();
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
-    const toggleMenu = () => {
-        setMenuOpen(!isMenuOpen);
-    };
+  const getIconClass = (href: string) =>
+    pathname === href ? "nav__icon nav__icon--active" : "nav__icon";
 
-    const getIconClass = (href: string) => {
-        if (pathname === href) {
-          return "button__nav-icon button__nav-icon--current";
-        }
-        return "button__nav-icon";
-    };
+  const getResponsiveLinkClass = (href: string) =>
+    pathname === href ? "nav__menu-link nav__menu-link--active" : "nav__menu-link";
 
-    const getIconClassResponsive = (href: string) => {
-        if (pathname === href) {
-          return "menu__link menu__link--current";
-        }
-        return "menu__link";
-    };
-
-
-    const renderChilds = () => {
-
-        return (
-            <span>
-                <div className='button_control'>                    
-                    <Link href='/'>
-                        <HomeIcon className={getIconClass("/")}/>
-                    </Link>
-                    <div className="button_control-hoverit">
-                        <p>Home</p>
-                    </div>
-                </div>
-                <div className='button_control'>
-                    <Link href='/about'>
-                        <PersonIcon className={getIconClass("/about")}/>
-                    </Link>
-                    <div className="button_control-hoverit">
-                        <p>About</p>
-                    </div>
-                </div>
-                <div className='button_control'>
-                    <Link href='/projects'>
-                        <BusinessCenterIcon className={getIconClass("/projects")}/>
-                    </Link>
-                    <div className="button_control-hoverit">
-                        <p>Projects</p>
-                    </div>
-                </div>
-                <div className='button_control'>
-                    <Link href='/contact'>
-                        <MailIcon className={getIconClass("/contact")}/>
-                    </Link>
-                    <div className="button_control-hoverit">
-                        <p>Contact</p>
-                    </div>
-                </div>
-            </span>
-        );
-
-    };
+  const renderNavItems = () => (
+    <>
+      {[
+        { href: "/", label: "Home", icon: <HomeIcon className={getIconClass("/")} /> },
+        { href: "/about", label: "About", icon: <PersonIcon className={getIconClass("/about")} /> },
+        { href: "/projects", label: "Projects", icon: <BusinessCenterIcon className={getIconClass("/projects")} /> },
+        { href: "/contact", label: "Contact", icon: <MailIcon className={getIconClass("/contact")} /> },
+      ].map(({ href, label, icon }) => (
+        <div className="nav__button" key={href}>
+          <Link href={href}>{icon}</Link>
+          <div className="nav__tooltip"><p>{label}</p></div>
+        </div>
+      ))}
+    </>
+  );
 
   return (
-    <span>
-        <div className="container__burger" onClick={toggleMenu}>
-            <div className={`menu${isMenuOpen ? "--active" : ""}`}>
-                <span className="menu__close"></span>
-                <ul className="nav-bar__ul">
-                    <li className="nav-bar__li">
-                        <Link href="/" className={getIconClassResponsive("/")}>Home</Link>
-                    </li>
-                    <li className="nav-bar__li">
-                        <Link href="/about" className={getIconClassResponsive("/about")}>About</Link>
-                    </li>
-                    <li className="nav-bar__li">
-                        <Link href="/projects" className={getIconClassResponsive("/projects")}>Projects</Link>
-                    </li>
-                    <li className="nav-bar__li">
-                        <Link href="/contact" className={getIconClassResponsive("/contact")}>Contact</Link>
-                    </li>
+    <>
+      <div className="nav__burger" onClick={toggleMenu}>
+        <div className={`nav__menu${isMenuOpen ? "--active" : ""}`}>
+          <span className="nav__menu-close"></span>
+          <ul className="nav__list">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/about", label: "About" },
+              { href: "/projects", label: "Projects" },
+              { href: "/contact", label: "Contact" },
+            ].map(({ href, label }) => (
+              <li className="nav__list-item" key={href}>
+                <Link href={href} className={getResponsiveLinkClass(href)}>
+                  {label}
+                </Link>
+              </li>
+            ))}
 
-                    <div className="container__socials">
-                        <Link href={'https://github.com/BuathierTom'} target="_blank">
-                            <GitHubIcon className="container__socials-icons"/>
-                        </Link>
-                        
-                        <Link href={'https://www.linkedin.com/in/tom-buathier/'} target="_blank">
-                            <LinkedInIcon className="container__socials-icons"/>
-                        </Link>
-                    </div>
-                </ul>
-
-
+            <div className="nav__socials">
+              <Link href="https://github.com/BuathierTom" target="_blank">
+                <GitHubIcon className="nav__social-icon" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/tom-buathier/" target="_blank">
+                <LinkedInIcon className="nav__social-icon" />
+              </Link>
             </div>
+          </ul>
         </div>
-        <div className="button__nav">
-            { renderChilds() }
-        </div>
-    </span>
+      </div>
+
+      <div className="nav__vertical">
+        {renderNavItems()}
+      </div>
+    </>
   );
 };
 
