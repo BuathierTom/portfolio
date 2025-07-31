@@ -1,107 +1,96 @@
-.container__button {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;  
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+
+  .skills__button {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 3rem;
-    margin-top: 3rem;
+    gap: 10px;
 
-    .button__skills {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    
-        margin-top: 20px;
-        width: 200px;
-        height: 70px;
-        background-color: $white;
-        border: 1px solid $primary;
-        border-radius: 10px;
-        color: $primary;
-        font-size: $font-size-sm;
-        font-weight: bold;
-    
-        transition: all 0.3s ease-in-out;
-        
-        .daron {
+    margin-top: 20px;
+    width: 200px;
+    height: 70px;
+    background-color: $white;
+    border: 1px solid $primary;
+    border-radius: 10px;
+    color: $primary;
+    font-size: $font-size-sm;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
+    .skills__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
 
-            svg {
-                width: 40px !important;
-                height: 40px !important;
-            }
-        }
-
+      svg {
+        width: 40px !important;
+        height: 40px !important;
+      }
     }
+  }
 }
 
 @media (max-width: $breakpoints-768) {
-    .container__button {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        margin-top: 1rem;
-        width: 100%;
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
 
-        .button__skills {
-            width: 260px;
-            height: 80px;
-            font-size: $font-size-sm;
+    .skills__button {
+      width: 260px;
+      height: 80px;
+      font-size: $font-size-sm;
 
-            .daron {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
+      .skills__content {
+        gap: 10px;
 
-    
-                svg {
-                    width: 40px !important;
-                    height: 40px !important;
-                }
-            }
-
-            img {
-                width: 30px;
-                height: 30px;
-            }
+        svg {
+          width: 40px !important;
+          height: 40px !important;
         }
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
     }
+  }
 }
 
 @media (max-width: $breakpoints-575) {
-    .container__button {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
-        margin-top: 1rem;
-        width: 100%;
+  .skills__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
 
-        .button__skills {
-            width: 260px;
-            height: 80px;
-            font-size: $font-size-sm;
+    .skills__button {
+      width: 260px;
+      height: 80px;
+      font-size: $font-size-sm;
 
-            .daron {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
+      .skills__content {
+        gap: 10px;
 
-    
-                svg {
-                    width: 40px !important;
-                    height: 40px !important;
-                }
-            }
-
-            img {
-                width: 30px;
-                height: 30px;
-            }
+        svg {
+          width: 40px !important;
+          height: 40px !important;
         }
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
     }
+  }
 }
