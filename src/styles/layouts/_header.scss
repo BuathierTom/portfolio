@@ -1,81 +1,75 @@
-.header__space {
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__name {
+    &:hover {
+      filter: drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
+    }
+  }
+
+  .header__logo {
+    display: none;
+
+    .header__logo-img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
+    }
+  }
+
+  .header__socials {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
 
-    .container__burger {
-        display: none;
+    .header__icon {
+      display: flex;
+      width: 40px;
+      height: 40px;
     }
-
-    .container__name {
-        &:hover {
-            // Neon effect
-            filter: 
-            drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
-        }
-    }
-
-    .container__img {
-        display: none;
-    }
-
-    .container__socials {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        .container__socials-icons {
-            display: flex;
-            width: 40px;
-            height: 40px;
-
-        }
-    }
+  }
 }
 
+// Responsive tablet
 @media (max-width: $breakpoints-768) {
-    
-    .header__space{
-        .container__socials {
-            display: none;
+  .header__wrapper {
+    .header__socials {
+      display: none;
 
-            .container__socials-icons {
-                display: none;
-            }
-        }
+      .header__icon {
+        display: none;
+      }
     }
+  }
 }
 
+// Responsive mobile
 @media (max-width: $breakpoints-480) {
-    .header__space {
-        .container__name {
-            display: none;
-        }
-
-        .container__socials {
-            display: none;
-
-            .container__socials-icons {
-                display: none;
-            }
-        }
-
-        .container__img {
-            display: flex;
-            
-            .container_img-img {
-                width: 50px;
-                height: 50px;
-            }
-            
-            &:hover {
-                // Neon effect
-                filter: 
-                drop-shadow(0 0 10px $white) contrast(1) brightness(0.9);
-            }
-        }
+  .header__wrapper {
+    .header__name {
+      display: none;
     }
+
+    .header__socials {
+      display: none;
+
+      .header__icon {
+        display: none;
+      }
+    }
+
+    .header__logo {
+      display: flex;
+    }
+  }
 }
-
-
