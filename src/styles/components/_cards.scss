@@ -64,7 +64,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       img {
         filter: brightness(0.4);
       }

@@ -7,11 +7,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import CloseIcon from '@mui/icons-material/Close';
 
 import jsonData from './data';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 type ProjectDetails = (typeof jsonData)[number];
 
 const CardsComponent = () => {
   const [activeProject, setActiveProject] = useState<ProjectDetails | null>(null);
+  const { t } = useLanguage();
 
   const handleOpenModal = (project: ProjectDetails) => setActiveProject(project);
   const handleCloseModal = () => setActiveProject(null);
@@ -37,7 +39,7 @@ const CardsComponent = () => {
             <span className="card__image">
               <Image
                 src={cardData.img}
-                alt={`${cardData.title} preview`}
+                alt={`${t(cardData.titleKey)} preview`}
                 width={300}
                 height={200}
               />
@@ -47,15 +49,16 @@ const CardsComponent = () => {
                   href={cardData.link_site}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${t('cards.overlay')} - ${t(cardData.titleKey)}`}
                 >
-                  <span>Visit site</span>
+                  <span>{t('cards.overlay')}</span>
                   <LaunchIcon />
                 </a>
               )}
             </span>
 
             <div className="card__title">
-              <h3>{cardData.title}</h3>
+              <h3>{t(cardData.titleKey)}</h3>
             </div>
 
             <div className="card__techs">
@@ -68,19 +71,19 @@ const CardsComponent = () => {
 
             <div className="card__body">
               <div className="card__description">
-                <p>{cardData.description}</p>
+                <p>{t(cardData.descriptionKey)}</p>
               </div>
             </div>
 
             <div className="card__footer">
               <div className="card__footer-left">
-                <button className="card__date">{cardData.date}</button>
+                <button className="card__date">{t(cardData.dateKey)}</button>
                 <button
                   className="card__details-button"
                   type="button"
                   onClick={() => handleOpenModal(cardData)}
                 >
-                  Details
+                  {t('cards.details')}
                 </button>
               </div>
 
@@ -115,27 +118,27 @@ const CardsComponent = () => {
             <button
               className="card__modal-close"
               type="button"
-              aria-label="Close project details dialog"
+              aria-label={t('cards.closeDialog')}
               onClick={handleCloseModal}
             >
               <CloseIcon fontSize="inherit" />
             </button>
 
             <div className="card__modal-header">
-              <span className="card__modal-date">{activeProject.date}</span>
-              <h2>{activeProject.title}</h2>
+              <span className="card__modal-date">{t(activeProject.dateKey)}</span>
+              <h2>{t(activeProject.titleKey)}</h2>
             </div>
 
             <div className="card__modal-body">
-              <p className="card__modal-description">{activeProject.description}</p>
+              <p className="card__modal-description">{t(activeProject.descriptionKey)}</p>
 
-              {activeProject.additionalInfo && (
-                <p className="card__modal-additional">{activeProject.additionalInfo}</p>
+              {activeProject.additionalInfoKey && (
+                <p className="card__modal-additional">{t(activeProject.additionalInfoKey)}</p>
               )}
 
               {activeProject.stack && (
                 <div className="card__modal-section">
-                  <h3>Tech stack</h3>
+                  <h3>{t('cards.techStack')}</h3>
                   <div className="card__modal-stack">
                     {activeProject.stack.map(({ Icon, label }, index) => (
                       <div className="card__modal-stack-item" key={index}>
@@ -149,12 +152,12 @@ const CardsComponent = () => {
                 </div>
               )}
 
-              {activeProject.details && (
+              {activeProject.detailsKeys && (
                 <div className="card__modal-section">
-                  <h3>Project highlights</h3>
+                  <h3>{t('cards.highlights')}</h3>
                   <ul>
-                    {activeProject.details.map((detail, index) => (
-                      <li key={index}>{detail}</li>
+                    {activeProject.detailsKeys.map((detailKey, index) => (
+                      <li key={index}>{t(detailKey)}</li>
                     ))}
                   </ul>
                 </div>
@@ -171,7 +174,7 @@ const CardsComponent = () => {
                     rel="noopener noreferrer"
                   >
                     <LaunchIcon className="card__modal-action-icon" />
-                    <span>View live site</span>
+                    <span>{t('cards.viewLive')}</span>
                   </a>
                 )}
                 {activeProject.link_github && (
@@ -182,7 +185,7 @@ const CardsComponent = () => {
                     rel="noopener noreferrer"
                   >
                     <GitHubIcon className="card__modal-action-icon" />
-                    <span>View source</span>
+                    <span>{t('cards.viewSource')}</span>
                   </a>
                 )}
               </div>

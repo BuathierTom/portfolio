@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Header } from '@/layouts';
-import { NavBar } from '@/components';
+import { LanguageSwitcher, NavBar } from '@/components';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 import '@/styles/index.scss';
 
 
@@ -17,9 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        <NavBar />
+        <LanguageProvider>
+          <Header />
+          {children}
+          <NavBar />
+          <LanguageSwitcher />
+        </LanguageProvider>
       </body>
     </html>
   )
