@@ -83,6 +83,19 @@ const translations = {
             "Implements responsive layouts and motion effects for a polished browsing experience.",
           ],
         },
+        qaPortfolio: {
+          title: "QA Tester Portfolio",
+          description:
+            "Portfolio site highlighting the QA and automation expertise of fictional tester Alex Dupont, available as an open-access reference for hiring teams.",
+          date: "Feb 2025",
+          additionalInfo:
+            "Public showcase detailing manual testing practices, automation tooling, and reporting workflows tailored to QA roles.",
+          details: [
+            "Presents case studies covering exploratory testing, automation strategy, and KPI dashboards for quality reporting.",
+            "Built with Vite, React, TypeScript, Tailwind CSS, and Radix UI primitives to ensure accessible, component-driven layouts.",
+            "Includes clear calls to action for contacting Alex, booking discovery calls, and reviewing certification highlights.",
+          ],
+        },
       },
     },
     cards: {
@@ -226,6 +239,19 @@ const translations = {
             "Construit avec le nouvel App Router de Next.js pour des pages performantes et optimisées SEO.",
             "Dispose de sections modulaires (à propos, compétences, projets, contact) basées sur des composants réutilisables.",
             "Propose des mises en page responsives et des effets de mouvement pour une expérience soignée.",
+          ],
+        },
+        qaPortfolio: {
+          title: "Portfolio QA",
+          description:
+            "Portfolio mettant en avant l'expertise QA et l'automatisation du testeur fictif Alex Dupont, pensé comme vitrine accessible pour les recruteurs.",
+          date: "Fév. 2025",
+          additionalInfo:
+            "Présentation publique des méthodologies de tests manuels, des outils d'automatisation et des workflows de reporting dédiés aux équipes QA.",
+          details: [
+            "Présente des études de cas couvrant test exploratoire, stratégie d'automatisation et tableaux de bord d'indicateurs de qualité.",
+            "Construit avec Vite, React, TypeScript, Tailwind CSS et les primitives Radix UI pour une interface component-driven et accessible.",
+            "Inclut des appels à l'action clairs pour contacter Alex, planifier un échange et consulter ses certifications.",
           ],
         },
       },

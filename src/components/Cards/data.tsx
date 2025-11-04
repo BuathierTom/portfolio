@@ -8,6 +8,7 @@ import {
   MongodbOriginal,
   SassOriginal,
   NextjsOriginal,
+  TailwindcssOriginal,
 } from 'devicons-react';
 
 type StackEntry = {
@@ -28,6 +29,26 @@ export type ProjectCard = {
 };
 
 const jsonData: ProjectCard[] = [
+    {
+      img: "/img/projects/portfolio-qa.png",
+      titleKey: "projects.cards.qaPortfolio.title",
+      descriptionKey: "projects.cards.qaPortfolio.description",
+      dateKey: "projects.cards.qaPortfolio.date",
+      link_site: "https://portfolio-qa.buathier-tom.fr/",
+      link_github: "https://github.com/BuathierTom/portfolio-qa-tester",
+      detailsKeys: [
+        "projects.cards.qaPortfolio.details.0",
+        "projects.cards.qaPortfolio.details.1",
+        "projects.cards.qaPortfolio.details.2",
+      ],
+      additionalInfoKey: "projects.cards.qaPortfolio.additionalInfo",
+      stack: [
+        { label: "Vite", Icon: VitejsOriginal },
+        { label: "React", Icon: ReactOriginal },
+        { label: "TypeScript", Icon: TypescriptOriginal },
+        { label: "Tailwind CSS", Icon: TailwindcssOriginal },
+      ],
+    },
     {
       img: "/img/projects/apishop.png",
       titleKey: "projects.cards.apishop.title",
@@ -67,6 +88,24 @@ const jsonData: ProjectCard[] = [
       ],
     },
     {
+      img: "/img/projects/portfolio.png",
+      titleKey: "projects.cards.portfolio.title",
+      descriptionKey: "projects.cards.portfolio.description",
+      dateKey: "projects.cards.portfolio.date",
+      link_site: "https://buathier-tom.fr/",
+      detailsKeys: [
+        "projects.cards.portfolio.details.0",
+        "projects.cards.portfolio.details.1",
+        "projects.cards.portfolio.details.2",
+      ],
+      additionalInfoKey: "projects.cards.portfolio.additionalInfo",
+      stack: [
+        { label: "Next.js", Icon: NextjsOriginal },
+        { label: "Sass", Icon: SassOriginal },
+        { label: "TypeScript", Icon: TypescriptOriginal },
+      ],
+    },
+    {
       img: "/img/projects/reserve.png",
       titleKey: "projects.cards.reserve.title",
       descriptionKey: "projects.cards.reserve.description",
@@ -84,24 +123,6 @@ const jsonData: ProjectCard[] = [
         { label: "Sass", Icon: SassOriginal },
         { label: "Node.js", Icon: NodejsOriginal },
         { label: "MongoDB", Icon: MongodbOriginal },
-      ],
-    },
-    {
-      img: "/img/projects/portfolio.png",
-      titleKey: "projects.cards.portfolio.title",
-      descriptionKey: "projects.cards.portfolio.description",
-      dateKey: "projects.cards.portfolio.date",
-      link_site: "https://buathier-tom.fr/",
-      detailsKeys: [
-        "projects.cards.portfolio.details.0",
-        "projects.cards.portfolio.details.1",
-        "projects.cards.portfolio.details.2",
-      ],
-      additionalInfoKey: "projects.cards.portfolio.additionalInfo",
-      stack: [
-        { label: "Next.js", Icon: NextjsOriginal },
-        { label: "Sass", Icon: SassOriginal },
-        { label: "TypeScript", Icon: TypescriptOriginal },
       ],
     },
   ];
