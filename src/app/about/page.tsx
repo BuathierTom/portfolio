@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { SkillsButtonsFront, SkillsButtonsBack, SkillsButtonsOther } from '@/components';
+import { SkillsShowcase } from '@/components';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 function About() {
@@ -17,7 +17,10 @@ function About() {
                 dangerouslySetInnerHTML={{ __html: t('about.title') }}
               />
               <div className="about__description">
-                <p dangerouslySetInnerHTML={{ __html: t('about.description') }} />
+                <div
+                  className="about__description-card"
+                  dangerouslySetInnerHTML={{ __html: t('about.description') }}
+                />
               </div>
             </div>
           </div>
@@ -27,20 +30,7 @@ function About() {
               <h1 dangerouslySetInnerHTML={{ __html: t('about.skillsTitle') }} />
             </div>
 
-            <div className="about__skills-group">
-              <h2 dangerouslySetInnerHTML={{ __html: t('about.frontTitle') }} />
-              <SkillsButtonsFront />
-            </div>
-
-            <div className="about__skills-group">
-              <h2 dangerouslySetInnerHTML={{ __html: t('about.backTitle') }} />
-              <SkillsButtonsBack />
-            </div>
-
-            <div className="about__skills-group">
-              <h2 dangerouslySetInnerHTML={{ __html: t('about.otherTitle') }} />
-              <SkillsButtonsOther />
-            </div>
+            <SkillsShowcase />
           </div>
         </div>
       </div>
