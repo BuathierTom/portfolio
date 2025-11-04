@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -10,6 +10,64 @@ import jsonData from './data';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 type ProjectDetails = (typeof jsonData)[number];
+
+const DESKTOP_VIEWPORT_WIDTH = 1920;
+const DESKTOP_VIEWPORT_HEIGHT = 1080;
+
+type PreviewFrameProps = {
+  url: string;
+  title: string;
+};
+
+const PreviewFrame = ({ url, title }: PreviewFrameProps) => {
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+
+  useEffect(() => {
+    const updateScale = () => {
+      if (!wrapperRef.current || !iframeRef.current) {
+        return;
+      }
+
+      const wrapperWidth = wrapperRef.current.offsetWidth;
+      const scale = wrapperWidth / DESKTOP_VIEWPORT_WIDTH;
+      iframeRef.current.style.transform = `translateX(-50%) scale(${scale})`;
+    };
+
+    updateScale();
+
+    const handleResize = () => updateScale();
+    window.addEventListener('resize', handleResize);
+
+    let observer: ResizeObserver | null = null;
+
+    if (typeof ResizeObserver !== 'undefined' && wrapperRef.current) {
+      observer = new ResizeObserver(() => updateScale());
+      observer.observe(wrapperRef.current);
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      observer?.disconnect();
+    };
+  }, []);
+
+  return (
+    <div className="card__preview-frame-wrapper" ref={wrapperRef}>
+      <iframe
+        ref={iframeRef}
+        className="card__preview-frame"
+        src={url}
+        title={title}
+        width={DESKTOP_VIEWPORT_WIDTH}
+        height={DESKTOP_VIEWPORT_HEIGHT}
+        loading="lazy"
+        allow="accelerometer; ambient-light-sensor; autoplay; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        allowFullScreen
+      />
+    </div>
+  );
+};
 
 const CardsComponent = () => {
   const [activeProject, setActiveProject] = useState<ProjectDetails | null>(null);
@@ -37,12 +95,19 @@ const CardsComponent = () => {
         {jsonData.map((cardData, index) => (
           <div className="card" key={index}>
             <span className="card__image">
-              <Image
-                src={cardData.img}
-                alt={`${t(cardData.titleKey)} preview`}
-                width={300}
-                height={200}
-              />
+              {cardData.previewUrl ? (
+                <PreviewFrame
+                  url={cardData.previewUrl}
+                  title={`${t(cardData.titleKey)} live preview`}
+                />
+              ) : (
+                <Image
+                  src={cardData.img}
+                  alt={`${t(cardData.titleKey)} preview`}
+                  width={300}
+                  height={200}
+                />
+              )}
               {cardData.link_site && (
                 <a
                   className="card__image-overlay"

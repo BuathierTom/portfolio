@@ -26,6 +26,7 @@ export type ProjectCard = {
   detailsKeys?: string[];
   stack: StackEntry[];
   additionalInfoKey?: string;
+  previewUrl?: string;
 };
 
 const jsonData: ProjectCard[] = [
@@ -36,6 +37,7 @@ const jsonData: ProjectCard[] = [
       dateKey: "projects.cards.qaPortfolio.date",
       link_site: "https://portfolio-qa.buathier-tom.fr/",
       link_github: "https://github.com/BuathierTom/portfolio-qa-tester",
+      previewUrl: "https://portfolio-qa.buathier-tom.fr/",
       detailsKeys: [
         "projects.cards.qaPortfolio.details.0",
         "projects.cards.qaPortfolio.details.1",
@@ -56,6 +58,7 @@ const jsonData: ProjectCard[] = [
       dateKey: "projects.cards.apishop.date",
       link_site: "https://apishop.buathier-tom.fr/",
       link_github: "https://github.com/BuathierTom/ApiShop",
+      previewUrl: "https://apishop.buathier-tom.fr/",
       detailsKeys: [
         "projects.cards.apishop.details.0",
         "projects.cards.apishop.details.1",
@@ -75,6 +78,7 @@ const jsonData: ProjectCard[] = [
       dateKey: "projects.cards.taskflow.date",
       link_site: "https://taskflow.buathier-tom.fr/",
       link_github: "https://github.com/BuathierTom/TaskFlow",
+      previewUrl: "https://taskflow.buathier-tom.fr/",
       detailsKeys: [
         "projects.cards.taskflow.details.0",
         "projects.cards.taskflow.details.1",
@@ -93,6 +97,7 @@ const jsonData: ProjectCard[] = [
       descriptionKey: "projects.cards.portfolio.description",
       dateKey: "projects.cards.portfolio.date",
       link_site: "https://buathier-tom.fr/",
+      previewUrl: "https://buathier-tom.fr/",
       detailsKeys: [
         "projects.cards.portfolio.details.0",
         "projects.cards.portfolio.details.1",
@@ -112,6 +117,7 @@ const jsonData: ProjectCard[] = [
       dateKey: "projects.cards.reserve.date",
       link_site: "https://reserveton-logis.vercel.app/",
       link_github: "https://github.com/BuathierTom/ReserveTonLogis/",
+      previewUrl: "https://reserveton-logis.vercel.app/",
       detailsKeys: [
         "projects.cards.reserve.details.0",
         "projects.cards.reserve.details.1",

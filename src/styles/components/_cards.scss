@@ -33,6 +33,39 @@
       transition: filter 0.4s ease;
     }
 
+    .card__preview-frame-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid $primary;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: rgba($background-color, 0.75);
+      transition: filter 0.4s ease;
+    }
+
+    .card__preview-frame {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1920px;
+      height: 1080px;
+      border: 0;
+      border-radius: 0;
+      transform: translateX(-50%) scale(0.2);
+      transform-origin: top center;
+      transition: filter 0.4s ease;
+    }
+
+    .card__preview-frame-wrapper::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 1px solid $primary;
+      border-radius: 10px;
+      pointer-events: none;
+    }
+
     .card__image-overlay {
       position: absolute;
       inset: 1.5rem;
@@ -66,7 +99,9 @@
 
     &:hover,
     &:focus-within {
-      img {
+      img,
+      .card__preview-frame-wrapper,
+      .card__preview-frame {
         filter: brightness(0.4);
       }
 
