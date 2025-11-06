@@ -19,9 +19,9 @@ const translations = {
     },
     about: {
       title: "About <span class='highlight'>Me</span>",
-      description: `<p>I am a computer science student at the University of Calais, preparing to begin a master's degree in Free Software Engineering (I2L). I enjoy designing interfaces that feel simple, building solid APIs, and keeping accessibility in mind.</p>
-<p>Over the past few years I have balanced classes with personal projects and internships. They led me to experiment with React and Next.js on the front end, Node.js and .NET on the back end, and to deploy services with Docker and managed databases. The projects highlighted here reflect those experiences and the way I collaborate with teammates.</p>
-<p>Once I complete my master's degree I want to join a product team as a fullstack developer, keep refining delivery pipelines, and continue sharing what I learn.</p>`,
+      description: `<p>I'm a computer science student at the University of Calais, and I'm about to start my master's degree in Free Software Engineering (I2L). I'm passionate about web development, and I've built many personal projects outside of my coursework, alongside my academic projects.</p>
+<p>In the Projects section of my portfolio, you'll find a selection of my most important and interesting work. This includes major projects I've completed during my three years of study at the University of Calais, as well as several personal projects I've developed on my own initiative. These projects cover a wide range of topics, from fullstack web applications and API development to more experimental or passion-driven ideas. Each project reflects both my technical skills and my curiosity to explore new technologies outside the classroom. Feel free to explore this section to get a better idea of my experience and my approach to problem-solving.</p>
+<p>After completing my master's degree, my goal is to work as a fullstack web developer.</p>`,
       skillsTitle: "My <span class='highlight'>Skills</span>",
       frontTitle: "<span class='highlight'>Front-End</span> tools",
       backTitle: "<span class='highlight'>Back-End</span> tools",
@@ -177,9 +177,9 @@ const translations = {
     },
     about: {
       title: "À propos <span class='highlight'>de moi</span>",
-      description: `<p>Je suis étudiant en informatique à l’Université de Calais et je m’apprête à commencer un master en Ingénierie des Logiciels Libres (I2L). J’aime concevoir des interfaces claires, développer des API fiables et garder l’accessibilité au cœur du projet.</p>
-<p>Ces dernières années, j’ai mené de front cours, projets personnels et stages. Cela m’a permis d’expérimenter React et Next.js côté front, Node.js et .NET côté back, mais aussi de déployer des services avec Docker et différentes bases de données managées. Les projets présentés ici illustrent ces expériences et la façon dont je travaille avec mes camarades.</p>
-<p>Une fois mon master terminé, je souhaite rejoindre une équipe produit comme développeur fullstack, continuer à améliorer les pipelines de livraison et transmettre ce que j’apprends.</p>`,
+      description: `<p>Je suis étudiant en informatique à l'Université de Calais, et je m'apprête à commencer mon master en Ingénierie du Logiciel Libre (I2L). Je suis passionné par le développement web, et j'ai réalisé de nombreux projets personnels en dehors de mes cours, en plus de mes projets universitaires.</p>
+<p>Dans la section Projets de mon portfolio, vous trouverez une sélection de mes réalisations les plus importantes et les plus intéressantes. Cela inclut les projets majeurs que j'ai réalisés au cours de mes trois années d'études à l'Université de Calais, ainsi que plusieurs projets personnels que j'ai développés de ma propre initiative. Ces projets couvrent un large éventail de sujets, allant d'applications web fullstack et de développement d'API à des idées plus expérimentales ou motivées par la passion. Chaque projet reflète à la fois mes compétences techniques et ma curiosité pour explorer de nouvelles technologies en dehors du cadre académique. N'hésitez pas à parcourir cette section pour mieux comprendre mon expérience et ma manière d'aborder la résolution de problèmes.</p>
+<p>Après l'obtention de mon master, mon objectif est de travailler en tant que développeur web fullstack.</p>`,
       skillsTitle: "Mes <span class='highlight'>compétences</span>",
       frontTitle: "Outils <span class='highlight'>Front-End</span>",
       backTitle: "Outils <span class='highlight'>Back-End</span>",
