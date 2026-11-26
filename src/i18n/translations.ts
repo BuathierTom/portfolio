@@ -15,7 +15,7 @@ const translations = {
       greeting: "Hello 👋,",
       nameIntro: "My name is <span class='highlight'>BUATHIER Tom</span>",
       role: "I'm an IT student, <span class='highlight'>a fullstack developer</span>",
-      resumeButton: "MY RESUME",
+      projectsButton: "MY PROJECTS",
     },
     about: {
       title: "About <span class='highlight'>Me</span>",
@@ -173,7 +173,7 @@ const translations = {
       greeting: "Bonjour 👋,",
       nameIntro: "Je m'appelle <span class='highlight'>BUATHIER Tom</span>",
       role: "Je suis étudiant en informatique, <span class='highlight'>développeur fullstack</span>",
-      resumeButton: "MON CV",
+      projectsButton: "MES PROJETS",
     },
     about: {
       title: "À propos <span class='highlight'>de moi</span>",

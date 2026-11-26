@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import DownloadIcon from '@mui/icons-material/Download';
+import Link from 'next/link';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 function Home() {
@@ -23,9 +24,10 @@ function Home() {
                 <h1>{t('home.greeting')}</h1>
                 <h2 dangerouslySetInnerHTML={{ __html: t('home.nameIntro') }} />
                 <h2 dangerouslySetInnerHTML={{ __html: t('home.role') }} />
-                <a href={process.env.cv_link} target='_blank' rel='noopener noreferrer'>
-                  <button className='btn__cv'><DownloadIcon className='icon' /> {t('home.resumeButton')}</button>
-                </a>
+                <Link href='/projects' className='btn__projects'>
+                  {t('home.projectsButton')}
+                  <ArrowForwardIcon className='btn__icon' />
+                </Link>
               </div>
             </div>
           </div>

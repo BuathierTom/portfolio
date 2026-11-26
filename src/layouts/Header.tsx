@@ -25,7 +25,7 @@ function Header() {
         <div className="header__logo">
           <a href="/">
             <Image
-              src="/img/layout/t_logo.png"
+              src="/img/layout/logo.png"
               alt="Tom Buathier"
               width={50}
               height={50}
