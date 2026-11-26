@@ -23,23 +23,9 @@ Pour démarrer le serveur local :
 npm run dev
 ```
 
-Ensuite, rendez-vous sur ce lien : [http://localhost:5000/](http://localhost:5000/) 🌐  
+Ensuite, rendez-vous sur ce lien : [http://localhost:5000/](http://localhost:5000/) 
 
-## Déploiement  
-
-Le portfolio est déployé sur **Vercel**, grâce à la compatibilité et à la simplicité du framework **Next.js**.  
-
-### **Lien vers le portfolio**  
-
--> [https://buathier-portfolio.vercel.app/](https://buathier-portfolio.vercel.app/)  
-
-## Variables d'environnement  
-
-Ajoutez cette variable d'environnement pour permettre l'accès au lien du CV :  
-
-- `cv_link` : Lien vers votre CV hébergé.  
-
-## 🎨 Palette de couleurs  
+## Palette de couleurs  
 
 Voici les couleurs principales utilisées pour le design du portfolio :  
 
@@ -49,11 +35,6 @@ Voici les couleurs principales utilisées pour le design du portfolio :
 | Bleu             | ![#1DA0FF](https://via.placeholder.com/10/1DA0FF?text=+) `#1DA0FF` |
 | Vert             | ![#22B460](https://via.placeholder.com/10/22B460?text=+) `#22B460` |
 
-
-## Licence  
-
-Ce projet est sous licence **MIT**, vous pouvez l'utiliser librement tout en respectant ses conditions.  
-
 ## Auteur  
 
-[BuathierTom](https://github.com/BuathierTom).  
+- [BuathierTom](https://github.com/BuathierTom)
