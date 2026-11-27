@@ -1,24 +1,20 @@
 // Themes
-@import "./themes/colors";
-@import "./themes/fonts";
-@import "./themes/typos";
-@import "./themes/breakpoints";
+@use "./themes";
 
 // Settings
-@import "settings";
+@use "settings";
 
 // Components
-@import "./components/navbar";
-@import "./components/skillsbuttons";
-@import "./components/cards";
-@import "./components/language-switcher";
-@import "./components/skills-showcase";
+@use "./components/navbar";
+@use "./components/cards";
+@use "./components/language-switcher";
+@use "./components/skills-showcase";
 
 // Pages
-@import "./pages/home";
-@import "./pages/about";
-@import "./pages/projects";
-@import "./pages/contact";
+@use "./pages/home";
+@use "./pages/about";
+@use "./pages/projects";
+@use "./pages/contact";
 
 // Layouts
-@import "./layouts/header";
+@use "./layouts/header";

@@ -1,3 +1,5 @@
+@use "../themes" as *;
+
 .cards__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
