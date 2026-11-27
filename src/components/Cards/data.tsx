@@ -27,6 +27,7 @@ export type ProjectCard = {
   stack: StackEntry[];
   additionalInfoKey?: string;
   previewUrl: string;
+  logo?: string;
 };
 
 const jsonData: ProjectCard[] = [
@@ -38,6 +39,7 @@ const jsonData: ProjectCard[] = [
       link_github: "https://github.com/BuathierTom/XenAddons",
       link_modrinth: "https://modrinth.com/mod/xenaddons",
       previewUrl: "https://addons.xenus.fr/",
+      logo: "/img/projects/xenaddons.webp",
       detailsKeys: [
         "projects.cards.xenaddons.details.0",
         "projects.cards.xenaddons.details.1",
@@ -52,30 +54,13 @@ const jsonData: ProjectCard[] = [
       ],
     },
     {
-      titleKey: "projects.cards.portfolio.title",
-      descriptionKey: "projects.cards.portfolio.description",
-      dateKey: "projects.cards.portfolio.date",
-      link_site: "https://buathier-tom.fr/",
-      previewUrl: "https://buathier-tom.fr/",
-      detailsKeys: [
-        "projects.cards.portfolio.details.0",
-        "projects.cards.portfolio.details.1",
-        "projects.cards.portfolio.details.2",
-      ],
-      additionalInfoKey: "projects.cards.portfolio.additionalInfo",
-      stack: [
-        { label: "Next.js", Icon: NextjsOriginal },
-        { label: "Sass", Icon: SassOriginal },
-        { label: "TypeScript", Icon: TypescriptOriginal },
-      ],
-    },
-    {
       titleKey: "projects.cards.hakuren.title",
       descriptionKey: "projects.cards.hakuren.description",
       dateKey: "projects.cards.hakuren.date",
       link_site: "https://hakuren.buathier-tom.fr/",
       link_github: "https://github.com/BuathierTom/Hakuren",
       previewUrl: "https://hakuren.buathier-tom.fr/",
+      logo: "/img/projects/hakuren.webp",
       detailsKeys: [
         "projects.cards.hakuren.details.0",
         "projects.cards.hakuren.details.1",
@@ -89,6 +74,25 @@ const jsonData: ProjectCard[] = [
         { label: "SCSS", Icon: SassOriginal },
         { label: "Fastify", Icon: FastifyOriginal },
         { label: "MySQL", Icon: MysqlOriginal },
+      ],
+    },
+    {
+      titleKey: "projects.cards.portfolio.title",
+      descriptionKey: "projects.cards.portfolio.description",
+      dateKey: "projects.cards.portfolio.date",
+      link_site: "https://buathier-tom.fr/",
+      previewUrl: "https://buathier-tom.fr/",
+      logo: "/img/projects/portoflio.webp",
+      detailsKeys: [
+        "projects.cards.portfolio.details.0",
+        "projects.cards.portfolio.details.1",
+        "projects.cards.portfolio.details.2",
+      ],
+      additionalInfoKey: "projects.cards.portfolio.additionalInfo",
+      stack: [
+        { label: "Next.js", Icon: NextjsOriginal },
+        { label: "Sass", Icon: SassOriginal },
+        { label: "TypeScript", Icon: TypescriptOriginal },
       ],
     },
   ];

@@ -82,6 +82,7 @@ const translations = {
       viewLive: "View live site",
       viewSource: "View source",
       viewModrinth: "View on Modrinth",
+      links: "Links",
       closeDialog: "Close project details dialog",
     },
     contact: {
@@ -217,6 +218,7 @@ const translations = {
       viewLive: "Voir le site",
       viewSource: "Voir le code",
       viewModrinth: "Voir sur Modrinth",
+      links: "Liens",
       closeDialog: "Fermer la fenêtre des détails du projet",
     },
     contact: {
