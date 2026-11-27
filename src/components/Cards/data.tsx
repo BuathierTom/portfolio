@@ -17,7 +17,6 @@ type StackEntry = {
 };
 
 export type ProjectCard = {
-  img: string;
   titleKey: string;
   descriptionKey: string;
   dateKey: string;
@@ -26,12 +25,11 @@ export type ProjectCard = {
   detailsKeys?: string[];
   stack: StackEntry[];
   additionalInfoKey?: string;
-  previewUrl?: string;
+  previewUrl: string;
 };
 
 const jsonData: ProjectCard[] = [
     {
-      img: "/img/projects/portfolio-qa.png",
       titleKey: "projects.cards.qaPortfolio.title",
       descriptionKey: "projects.cards.qaPortfolio.description",
       dateKey: "projects.cards.qaPortfolio.date",
@@ -52,7 +50,6 @@ const jsonData: ProjectCard[] = [
       ],
     },
     {
-      img: "/img/projects/apishop.png",
       titleKey: "projects.cards.apishop.title",
       descriptionKey: "projects.cards.apishop.description",
       dateKey: "projects.cards.apishop.date",
@@ -72,7 +69,6 @@ const jsonData: ProjectCard[] = [
       ],
     },
     {
-      img: "/img/projects/taskflow.png",
       titleKey: "projects.cards.taskflow.title",
       descriptionKey: "projects.cards.taskflow.description",
       dateKey: "projects.cards.taskflow.date",
@@ -92,7 +88,6 @@ const jsonData: ProjectCard[] = [
       ],
     },
     {
-      img: "/img/projects/portfolio.png",
       titleKey: "projects.cards.portfolio.title",
       descriptionKey: "projects.cards.portfolio.description",
       dateKey: "projects.cards.portfolio.date",
@@ -111,7 +106,6 @@ const jsonData: ProjectCard[] = [
       ],
     },
     {
-      img: "/img/projects/reserve.png",
       titleKey: "projects.cards.reserve.title",
       descriptionKey: "projects.cards.reserve.description",
       dateKey: "projects.cards.reserve.date",
