@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CloseIcon from '@mui/icons-material/Close';
+import { SiModrinth } from 'react-icons/si';
 
 import jsonData from './data';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -162,16 +163,28 @@ const CardsComponent = () => {
                 </button>
               </div>
 
-              {cardData.link_github && (
+              {(cardData.link_github || cardData.link_modrinth) && (
                 <span className="card__links">
-                  <a
-                    href={cardData.link_github}
-                    target="_blank"
-                    className="card__link"
-                    rel="noopener noreferrer"
-                  >
-                    <GitHubIcon />
-                  </a>
+                  {cardData.link_github && (
+                    <a
+                      href={cardData.link_github}
+                      target="_blank"
+                      className="card__link"
+                      rel="noopener noreferrer"
+                    >
+                      <GitHubIcon />
+                    </a>
+                  )}
+                  {cardData.link_modrinth && (
+                    <a
+                      href={cardData.link_modrinth}
+                      target="_blank"
+                      className="card__link"
+                      rel="noopener noreferrer"
+                    >
+                      <SiModrinth />
+                    </a>
+                  )}
                 </span>
               )}
             </div>
@@ -239,7 +252,7 @@ const CardsComponent = () => {
               )}
             </div>
 
-            {(activeProject.link_site || activeProject.link_github) && (
+            {(activeProject.link_site || activeProject.link_github || activeProject.link_modrinth) && (
               <div className="card__modal-footer">
                 {activeProject.link_site && (
                   <a
@@ -261,6 +274,17 @@ const CardsComponent = () => {
                   >
                     <GitHubIcon className="card__modal-action-icon" />
                     <span>{t('cards.viewSource')}</span>
+                  </a>
+                )}
+                {activeProject.link_modrinth && (
+                  <a
+                    className="card__modal-action"
+                    href={activeProject.link_modrinth}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SiModrinth className="card__modal-action-icon" />
+                    <span>{t('cards.viewModrinth')}</span>
                   </a>
                 )}
               </div>

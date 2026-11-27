@@ -3,6 +3,9 @@ import {
   TypescriptOriginal,
   SassOriginal,
   NextjsOriginal,
+  JavaOriginal,
+  KotlinOriginal,
+  GradleOriginal,
 } from 'devicons-react';
 
 type StackEntry = {
@@ -16,6 +19,7 @@ export type ProjectCard = {
   dateKey: string;
   link_site?: string;
   link_github?: string;
+  link_modrinth?: string;
   detailsKeys?: string[];
   stack: StackEntry[];
   additionalInfoKey?: string;
@@ -23,6 +27,27 @@ export type ProjectCard = {
 };
 
 const jsonData: ProjectCard[] = [
+    {
+      titleKey: "projects.cards.xenaddons.title",
+      descriptionKey: "projects.cards.xenaddons.description",
+      dateKey: "projects.cards.xenaddons.date",
+      link_site: "https://addons.xenus.fr/",
+      link_github: "https://github.com/BuathierTom/XenAddons",
+      link_modrinth: "https://modrinth.com/mod/xenaddons",
+      previewUrl: "https://addons.xenus.fr/",
+      detailsKeys: [
+        "projects.cards.xenaddons.details.0",
+        "projects.cards.xenaddons.details.1",
+        "projects.cards.xenaddons.details.2",
+        "projects.cards.xenaddons.details.3",
+      ],
+      additionalInfoKey: "projects.cards.xenaddons.additionalInfo",
+      stack: [
+        { label: "Java", Icon: JavaOriginal },
+        { label: "Kotlin", Icon: KotlinOriginal },
+        { label: "Gradle", Icon: GradleOriginal },
+      ],
+    },
     {
       titleKey: "projects.cards.portfolio.title",
       descriptionKey: "projects.cards.portfolio.description",

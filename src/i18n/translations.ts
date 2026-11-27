@@ -31,6 +31,20 @@ const translations = {
       title: "My <span class='projects__title-highlight'>Projects</span>",
       description: `Here's my projects section, where you can see my biggest projects from my student years. If you'd like to see more projects, please visit my <a href="https://github.com/BuathierTom" target="_blank" rel="noopener noreferrer">Github</a>.`,
       cards: {
+        xenaddons: {
+          title: "XenAddons",
+          description:
+            "Client-side Fabric mod that brings the must-have features of 1.8.9-era Hypixel SkyBlock mods back to recent Minecraft versions, backed by a dedicated website and API.",
+          date: "Feb 2025 - Present",
+          additionalInfo:
+            "Personal project under active development, published on Modrinth with over 2,800 downloads.",
+          details: [
+            "Single multi-version codebase covering Minecraft 1.21.11 to 26.3, managed with Stonecutter and Gradle (Kotlin DSL).",
+            "Nearly 50 features across dungeons, slayers, fishing and everyday tools: boss alerts, invincibility timers, warp shortcuts and more.",
+            "Website letting players add and edit their custom name and cosmetics, which are then displayed in game.",
+            "API built to fetch Auction House prices and show them in game, directly in item tooltips.",
+          ],
+        },
         portfolio: {
           title: "Portfolio",
           description:
@@ -53,6 +67,7 @@ const translations = {
       highlights: "Project highlights",
       viewLive: "View live site",
       viewSource: "View source",
+      viewModrinth: "View on Modrinth",
       closeDialog: "Close project details dialog",
     },
     contact: {
@@ -137,6 +152,20 @@ const translations = {
       title: "Mes <span class='projects__title-highlight'>Projets</span>",
       description: `Voici ma section projets, où vous trouverez mes réalisations les plus marquantes de ces dernières années. Pour découvrir davantage de projets, n'hésitez pas à visiter mon <a href="https://github.com/BuathierTom" target="_blank" rel="noopener noreferrer">Github</a>.`,
       cards: {
+        xenaddons: {
+          title: "XenAddons",
+          description:
+            "Mod Fabric côté client qui fait revenir sur les versions récentes de Minecraft les fonctionnalités incontournables des mods Hypixel SkyBlock de l'époque 1.8.9, accompagné d'un site web et d'une API dédiés.",
+          date: "Fév. 2025 - Maintenant",
+          additionalInfo:
+            "Projet personnel en développement actif, publié sur Modrinth où il dépasse les 2 800 téléchargements.",
+          details: [
+            "Une seule base de code multi-versions, de Minecraft 1.21.11 à 26.3, gérée avec Stonecutter et Gradle (Kotlin DSL).",
+            "Près de 50 fonctionnalités réparties entre donjons, slayers, pêche et outils du quotidien : alertes de boss, timers d'invincibilité, raccourcis de warp…",
+            "Site web permettant aux joueurs d'ajouter et de modifier leur nom personnalisé et leurs cosmétiques, affichés ensuite en jeu.",
+            "Mise en place d'une API qui récupère les prix de l'Auction House pour les afficher en jeu, directement dans les infobulles des objets.",
+          ],
+        },
         portfolio: {
           title: "Portfolio",
           description:
@@ -159,6 +188,7 @@ const translations = {
       highlights: "Points clés du projet",
       viewLive: "Voir le site",
       viewSource: "Voir le code",
+      viewModrinth: "Voir sur Modrinth",
       closeDialog: "Fermer la fenêtre des détails du projet",
     },
     contact: {
