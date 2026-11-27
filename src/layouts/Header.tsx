@@ -23,7 +23,7 @@ function Header() {
         </h1>
 
         <div className="header__logo">
-          <a href="/">
+          <Link href="/">
             <Image
               src="/img/layout/logo.png"
               alt="Tom Buathier"
@@ -31,7 +31,7 @@ function Header() {
               height={50}
               className="header__logo-img"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="header__socials">

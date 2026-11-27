@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useSyncExternalStore } from "react";
 import translations from "@/i18n/translations";
 
 export type Language = "en" | "fr";
@@ -29,21 +29,34 @@ const getNestedTranslation = (map: TranslationMap[Language], key: TranslationKey
 
 const STORAGE_KEY = "portfolio-language";
 
+const languageListeners = new Set<() => void>();
+
+const subscribeLanguage = (listener: () => void) => {
+  languageListeners.add(listener);
+  return () => {
+    languageListeners.delete(listener);
+  };
+};
+
+const getClientLanguage = (): Language => {
+  const storedLanguage = window.localStorage.getItem(STORAGE_KEY);
+
+  if (storedLanguage === "en" || storedLanguage === "fr") {
+    return storedLanguage;
+  }
+
+  return navigator.language?.toLowerCase().startsWith("fr") ? "fr" : "en";
+};
+
+const getServerLanguage = (): Language => "en";
+
+const setLanguage = (lang: Language) => {
+  window.localStorage.setItem(STORAGE_KEY, lang);
+  languageListeners.forEach((listener) => listener());
+};
+
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguage] = useState<Language>("en");
-
-  useEffect(() => {
-    const storedLanguage =
-      typeof window !== "undefined" ? (window.localStorage.getItem(STORAGE_KEY) as Language | null) : null;
-
-    if (storedLanguage === "en" || storedLanguage === "fr") {
-      setLanguage(storedLanguage);
-    } else {
-      const browserLanguage =
-        typeof navigator !== "undefined" && navigator.language?.toLowerCase().startsWith("fr") ? "fr" : "en";
-      setLanguage(browserLanguage);
-    }
-  }, []);
+  const language = useSyncExternalStore(subscribeLanguage, getClientLanguage, getServerLanguage);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -67,7 +80,7 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     return {
       language,
       setLanguage,
-      toggleLanguage: () => setLanguage((prev) => (prev === "en" ? "fr" : "en")),
+      toggleLanguage: () => setLanguage(language === "en" ? "fr" : "en"),
       t,
     };
   }, [language]);
