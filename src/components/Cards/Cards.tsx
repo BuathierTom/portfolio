@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CloseIcon from '@mui/icons-material/Close';
@@ -91,6 +92,7 @@ const PreviewFrame = ({ url, title }: PreviewFrameProps) => {
 
 const CardsComponent = () => {
   const [activeProject, setActiveProject] = useState<ProjectDetails | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const { t } = useLanguage();
 
   const handleOpenModal = (project: ProjectDetails) => setActiveProject(project);
@@ -103,9 +105,19 @@ const CardsComponent = () => {
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveProject(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [activeProject]);
 
@@ -197,6 +209,7 @@ const CardsComponent = () => {
           className="card__modal-overlay"
           role="dialog"
           aria-modal="true"
+          aria-labelledby="card-modal-title"
           onClick={handleCloseModal}
         >
           <div
@@ -204,6 +217,7 @@ const CardsComponent = () => {
             onClick={(event) => event.stopPropagation()}
           >
             <button
+              ref={closeButtonRef}
               className="card__modal-close"
               type="button"
               aria-label={t('cards.closeDialog')}
@@ -212,83 +226,104 @@ const CardsComponent = () => {
               <CloseIcon fontSize="inherit" />
             </button>
 
-            <div className="card__modal-header">
-              <span className="card__modal-date">{t(activeProject.dateKey)}</span>
-              <h2>{t(activeProject.titleKey)}</h2>
-            </div>
-
-            <div className="card__modal-body">
-              <p className="card__modal-description">{t(activeProject.descriptionKey)}</p>
-
-              {activeProject.additionalInfoKey && (
-                <p className="card__modal-additional">{t(activeProject.additionalInfoKey)}</p>
-              )}
-
-              {activeProject.stack && (
-                <div className="card__modal-section">
-                  <h3>{t('cards.techStack')}</h3>
-                  <div className="card__modal-stack">
-                    {activeProject.stack.map(({ Icon, label }, index) => (
-                      <div className="card__modal-stack-item" key={index}>
-                        <span className="card__modal-stack-icon" title={label}>
-                          <Icon />
-                        </span>
-                        <span className="card__modal-stack-label">{label}</span>
-                      </div>
-                    ))}
+            <div className="card__modal-content">
+              <div className="card__modal-header">
+                <div className="card__modal-heading">
+                  {activeProject.logo && (
+                    <Image
+                      className="card__modal-logo"
+                      src={activeProject.logo}
+                      alt={`${t(activeProject.titleKey)} logo`}
+                      width={72}
+                      height={72}
+                    />
+                  )}
+                  <div className="card__modal-heading-text">
+                    <span className="card__modal-date">{t(activeProject.dateKey)}</span>
+                    <h2 id="card-modal-title">{t(activeProject.titleKey)}</h2>
                   </div>
                 </div>
-              )}
-
-              {activeProject.detailsKeys && (
-                <div className="card__modal-section">
-                  <h3>{t('cards.highlights')}</h3>
-                  <ul>
-                    {activeProject.detailsKeys.map((detailKey, index) => (
-                      <li key={index}>{t(detailKey)}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-
-            {(activeProject.link_site || activeProject.link_github || activeProject.link_modrinth) && (
-              <div className="card__modal-footer">
-                {activeProject.link_site && (
-                  <a
-                    className="card__modal-action"
-                    href={activeProject.link_site}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LaunchIcon className="card__modal-action-icon" />
-                    <span>{t('cards.viewLive')}</span>
-                  </a>
-                )}
-                {activeProject.link_github && (
-                  <a
-                    className="card__modal-action"
-                    href={activeProject.link_github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GitHubIcon className="card__modal-action-icon" />
-                    <span>{t('cards.viewSource')}</span>
-                  </a>
-                )}
-                {activeProject.link_modrinth && (
-                  <a
-                    className="card__modal-action"
-                    href={activeProject.link_modrinth}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <SiModrinth className="card__modal-action-icon" />
-                    <span>{t('cards.viewModrinth')}</span>
-                  </a>
-                )}
+                <p className="card__modal-description">{t(activeProject.descriptionKey)}</p>
               </div>
-            )}
+
+              <div className="card__modal-grid">
+                <div className="card__modal-main">
+                  {activeProject.additionalInfoKey && (
+                    <p className="card__modal-additional">{t(activeProject.additionalInfoKey)}</p>
+                  )}
+
+                  {activeProject.detailsKeys && (
+                    <div className="card__modal-section">
+                      <h3>{t('cards.highlights')}</h3>
+                      <ul className="card__modal-highlights">
+                        {activeProject.detailsKeys.map((detailKey, index) => (
+                          <li key={index}>{t(detailKey)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+
+                <aside className="card__modal-aside">
+                  {activeProject.stack && (
+                    <div className="card__modal-section">
+                      <h3>{t('cards.techStack')}</h3>
+                      <div className="card__modal-stack">
+                        {activeProject.stack.map(({ Icon, label }, index) => (
+                          <div className="card__modal-stack-item" key={index}>
+                            <span className="card__modal-stack-icon" title={label}>
+                              <Icon />
+                            </span>
+                            <span className="card__modal-stack-label">{label}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {(activeProject.link_site || activeProject.link_github || activeProject.link_modrinth) && (
+                    <div className="card__modal-section">
+                      <h3>{t('cards.links')}</h3>
+                      <div className="card__modal-links">
+                        {activeProject.link_site && (
+                          <a
+                            className="card__modal-action card__modal-action--primary"
+                            href={activeProject.link_site}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <LaunchIcon className="card__modal-action-icon" />
+                            <span>{t('cards.viewLive')}</span>
+                          </a>
+                        )}
+                        {activeProject.link_github && (
+                          <a
+                            className="card__modal-action"
+                            href={activeProject.link_github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <GitHubIcon className="card__modal-action-icon" />
+                            <span>{t('cards.viewSource')}</span>
+                          </a>
+                        )}
+                        {activeProject.link_modrinth && (
+                          <a
+                            className="card__modal-action"
+                            href={activeProject.link_modrinth}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <SiModrinth className="card__modal-action-icon" />
+                            <span>{t('cards.viewModrinth')}</span>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </aside>
+              </div>
+            </div>
           </div>
         </div>
       )}

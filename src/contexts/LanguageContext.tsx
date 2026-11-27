@@ -59,12 +59,7 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
   const language = useSyncExternalStore(subscribeLanguage, getClientLanguage, getServerLanguage);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(STORAGE_KEY, language);
-    }
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = language;
-    }
+    document.documentElement.lang = language;
   }, [language]);
 
   const value = useMemo<LanguageContextValue>(() => {

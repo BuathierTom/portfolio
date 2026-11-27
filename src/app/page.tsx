@@ -17,7 +17,7 @@ function Home() {
             <div className='home__layout'>
               <aside className='profile__container'>
                 <div className='profile__image-wrapper'>
-                  <Image src='/img/home/profil.jpg' alt='profil' width={250} height={250} />
+                  <Image src='/img/home/profil.webp' alt='profil' width={250} height={250} />
                 </div>
               </aside>
               <div className='intro'>
