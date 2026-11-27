@@ -31,45 +31,6 @@ const translations = {
       title: "My <span class='projects__title-highlight'>Projects</span>",
       description: `Here's my projects section, where you can see my biggest projects from my student years. If you'd like to see more projects, please visit my <a href="https://github.com/BuathierTom" target="_blank" rel="noopener noreferrer">Github</a>.`,
       cards: {
-        apishop: {
-          title: "ApiShop",
-          description:
-            "ApiShop is a full-featured e-commerce REST API built with ASP.NET Core, providing user authentication, product and category management, shopping cart functionality, and order processing.",
-          date: "Jul 2025",
-          additionalInfo:
-            "Personal project exploring what it takes to build an end-to-end e-commerce API with .NET and TypeScript.",
-          details: [
-            "Implements secure JWT authentication with role-based access for customers and administrators.",
-            "Provides a full CRUD back-office for products, categories, discounts, and inventories.",
-            "Includes order tracking with state transitions, payment simulation, and email notifications.",
-          ],
-        },
-        taskflow: {
-          title: "TaskFlow",
-          description:
-            "TaskFlow is a dynamic and responsive to-do list application to manage daily tasks with deadlines and status tracking.",
-          date: "Jul 2025",
-          additionalInfo:
-            "Lightweight productivity app designed for day-to-day use on both mobile and desktop.",
-          details: [
-            "Organises tasks by priority, deadlines, and completion status with instant filtering.",
-            "Persists data locally and syncs UI state to keep the workflow consistent between sessions.",
-            "Offers a responsive drag-and-drop interface optimised for mobile and desktop usage.",
-          ],
-        },
-        reserve: {
-          title: "ReserveTonLogis",
-          description:
-            "Website for managing bookings for 3 guest rooms in a private home. The site is dynamic and allows you to book a room at different prices depending on the season.",
-          date: "Sep 2023 - Nov 2023",
-          additionalInfo:
-            "Small-team project focused on digitising the booking workflow for a multi-room guest house.",
-          details: [
-            "Integrates a custom booking calendar with seasonal pricing logic and availability checks.",
-            "Stores reservations and customer data securely with validation and confirmation emails.",
-            "Includes an admin dashboard to manage rooms, pricing tiers, and special offers in real time.",
-          ],
-        },
         portfolio: {
           title: "Portfolio",
           description:
@@ -81,19 +42,6 @@ const translations = {
             "Built with the latest Next.js app router to deliver performant, SEO-friendly pages.",
             "Features modular sections (about, skills, projects, contact) powered by reusable components.",
             "Implements responsive layouts and motion effects for a polished browsing experience.",
-          ],
-        },
-        qaPortfolio: {
-          title: "QA Tester Portfolio",
-          description:
-            "Portfolio site highlighting the QA and automation expertise of fictional tester Alex Dupont, available as an open-access reference for hiring teams.",
-          date: "Feb 2025",
-          additionalInfo:
-            "Public showcase detailing manual testing practices, automation tooling, and reporting workflows tailored to QA roles.",
-          details: [
-            "Presents case studies covering exploratory testing, automation strategy, and KPI dashboards for quality reporting.",
-            "Built with Vite, React, TypeScript, Tailwind CSS, and Radix UI primitives to ensure accessible, component-driven layouts.",
-            "Includes clear calls to action for contacting Alex, booking discovery calls, and reviewing certification highlights.",
           ],
         },
       },
@@ -189,45 +137,6 @@ const translations = {
       title: "Mes <span class='projects__title-highlight'>Projets</span>",
       description: `Voici ma section projets, où vous trouverez mes réalisations les plus marquantes de ces dernières années. Pour découvrir davantage de projets, n'hésitez pas à visiter mon <a href="https://github.com/BuathierTom" target="_blank" rel="noopener noreferrer">Github</a>.`,
       cards: {
-        apishop: {
-          title: "ApiShop",
-          description:
-            "ApiShop est une API REST e-commerce complète réalisée avec ASP.NET Core : authentification, gestion des produits et catégories, panier et suivi des commandes.",
-          date: "Juil. 2025",
-          additionalInfo:
-            "Projet personnel visant à explorer la construction d'une API e-commerce de bout en bout avec .NET et TypeScript.",
-          details: [
-            "Implémente une authentification JWT sécurisée avec gestion des rôles pour clients et administrateurs.",
-            "Fournit un back-office complet (produits, catégories, remises, stocks) avec opérations CRUD.",
-            "Inclut un suivi des commandes avec états, simulation de paiement et notifications e-mail.",
-          ],
-        },
-        taskflow: {
-          title: "TaskFlow",
-          description:
-            "TaskFlow est une application de to-do list responsive pour gérer les tâches quotidiennes avec priorités, deadlines et suivi d'avancement.",
-          date: "Juil. 2025",
-          additionalInfo:
-            "Application de productivité conçue pour un usage quotidien sur mobile comme sur desktop.",
-          details: [
-            "Organise les tâches par priorité, échéance et statut avec un filtrage instantané.",
-            "Sauvegarde les données localement et synchronise l’interface pour conserver le contexte d’une session à l’autre.",
-            "Propose une interface responsive avec glisser-déposer optimisée pour les usages tactile et souris.",
-          ],
-        },
-        reserve: {
-          title: "ReserveTonLogis",
-          description:
-            "Site de réservation pour 3 chambres d'hôtes permettant de gérer les disponibilités et tarifs variables selon la saison.",
-          date: "Sept. 2023 - Nov. 2023",
-          additionalInfo:
-            "Projet mené en petite équipe pour digitaliser la gestion des réservations d’une maison d’hôtes.",
-          details: [
-            "Intègre un calendrier de réservation avec logique tarifaire saisonnière et vérification des disponibilités.",
-            "Stocke les réservations et données clients de manière sécurisée avec validations et e-mails de confirmation.",
-            "Inclut un tableau de bord administrateur pour gérer chambres, grilles tarifaires et offres spéciales en temps réel.",
-          ],
-        },
         portfolio: {
           title: "Portfolio",
           description:
@@ -239,19 +148,6 @@ const translations = {
             "Construit avec le nouvel App Router de Next.js pour des pages performantes et optimisées SEO.",
             "Dispose de sections modulaires (à propos, compétences, projets, contact) basées sur des composants réutilisables.",
             "Propose des mises en page responsives et des effets de mouvement pour une expérience soignée.",
-          ],
-        },
-        qaPortfolio: {
-          title: "Portfolio QA",
-          description:
-            "Portfolio mettant en avant l'expertise QA et l'automatisation du testeur fictif Alex Dupont, pensé comme vitrine accessible pour les recruteurs.",
-          date: "Fév. 2025",
-          additionalInfo:
-            "Présentation publique des méthodologies de tests manuels, des outils d'automatisation et des workflows de reporting dédiés aux équipes QA.",
-          details: [
-            "Présente des études de cas couvrant test exploratoire, stratégie d'automatisation et tableaux de bord d'indicateurs de qualité.",
-            "Construit avec Vite, React, TypeScript, Tailwind CSS et les primitives Radix UI pour une interface component-driven et accessible.",
-            "Inclut des appels à l'action clairs pour contacter Alex, planifier un échange et consulter ses certifications.",
           ],
         },
       },
