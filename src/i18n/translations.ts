@@ -58,6 +58,20 @@ const translations = {
             "Implements responsive layouts and motion effects for a polished browsing experience.",
           ],
         },
+        hakuren: {
+          title: "Hakuren",
+          description:
+            "Web app for Inazuma Eleven: Victory Road combining a character encyclopedia, collection tracking and custom team building.",
+          date: "Nov 2026",
+          additionalInfo:
+            "Full-stack personal project dedicated to Inazuma Eleven: Victory Road, with a catalogue of characters, passives and team crests imported into the database.",
+          details: [
+            "Discord sign-in (OAuth2): the account is created on first login, and teams and the current draft are saved to it.",
+            "Technique previews so players can check each character's moves before building their team.",
+            "Installable web app that opens like a native application on mobile and desktop.",
+            "TypeScript monorepo with a React frontend and a Fastify API, a MySQL database managed with MikroORM and migrations applied automatically on every deployment.",
+          ],
+        },
       },
     },
     cards: {
@@ -177,6 +191,20 @@ const translations = {
             "Construit avec le nouvel App Router de Next.js pour des pages performantes et optimisées SEO.",
             "Dispose de sections modulaires (à propos, compétences, projets, contact) basées sur des composants réutilisables.",
             "Propose des mises en page responsives et des effets de mouvement pour une expérience soignée.",
+          ],
+        },
+        hakuren: {
+          title: "Hakuren",
+          description:
+            "Web app pour Inazuma Eleven: Victory Road qui réunit une encyclopédie des personnages, le suivi de sa collection et la création d'équipes personnalisées.",
+          date: "Nov. 2026",
+          additionalInfo:
+            "Projet personnel fullstack dédié à Inazuma Eleven: Victory Road, avec un catalogue de personnages, de passifs et d'écussons d'équipes importé en base.",
+          details: [
+            "Connexion via Discord (OAuth2) : le compte est créé à la première connexion, et les équipes comme le brouillon en cours y sont sauvegardés.",
+            "Prévisualisation des techniques pour consulter les coups de chaque personnage avant de composer son équipe.",
+            "Web app installable qui s'ouvre comme une application native, sur mobile comme sur ordinateur.",
+            "Monorepo TypeScript avec un front React et une API Fastify, une base MySQL gérée avec MikroORM et des migrations appliquées automatiquement à chaque déploiement.",
           ],
         },
       },

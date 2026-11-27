@@ -6,6 +6,9 @@ import {
   JavaOriginal,
   KotlinOriginal,
   GradleOriginal,
+  ReactOriginal,
+  FastifyOriginal,
+  MysqlOriginal,
 } from 'devicons-react';
 
 type StackEntry = {
@@ -64,6 +67,28 @@ const jsonData: ProjectCard[] = [
         { label: "Next.js", Icon: NextjsOriginal },
         { label: "Sass", Icon: SassOriginal },
         { label: "TypeScript", Icon: TypescriptOriginal },
+      ],
+    },
+    {
+      titleKey: "projects.cards.hakuren.title",
+      descriptionKey: "projects.cards.hakuren.description",
+      dateKey: "projects.cards.hakuren.date",
+      link_site: "https://hakuren.buathier-tom.fr/",
+      link_github: "https://github.com/BuathierTom/Hakuren",
+      previewUrl: "https://hakuren.buathier-tom.fr/",
+      detailsKeys: [
+        "projects.cards.hakuren.details.0",
+        "projects.cards.hakuren.details.1",
+        "projects.cards.hakuren.details.2",
+        "projects.cards.hakuren.details.3",
+      ],
+      additionalInfoKey: "projects.cards.hakuren.additionalInfo",
+      stack: [
+        { label: "React", Icon: ReactOriginal },
+        { label: "TypeScript", Icon: TypescriptOriginal },
+        { label: "SCSS", Icon: SassOriginal },
+        { label: "Fastify", Icon: FastifyOriginal },
+        { label: "MySQL", Icon: MysqlOriginal },
       ],
     },
   ];
