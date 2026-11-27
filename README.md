@@ -35,6 +35,6 @@ Voici les couleurs principales utilisées pour le design du portfolio :
 | Bleu             | ![#1DA0FF](https://via.placeholder.com/10/1DA0FF?text=+) `#1DA0FF` |
 | Vert             | ![#22B460](https://via.placeholder.com/10/22B460?text=+) `#22B460` |
 
-## Auteur  
+## License
 
-- [BuathierTom](https://github.com/BuathierTom)
+Ce projet est distribué sous licence : [**MIT**](LICENSE)
